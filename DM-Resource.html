@@ -1,0 +1,78 @@
+
+<div style="background-color:black; color:white; padding:30px;">
+	<h1>
+		Dungeon Master Resource
+	</h1>
+
+	<div class="tab">
+        <button id="encounterTab" class="tablinks" onclick="encounterPic()"> Encounter </button>
+        <button id="treasureTab" class="tablinks" onclick="treasurePic()"> Treasures </button>
+        <button id="npcTab" class="tablinks" onclick="NPC_Pic()"> NPCs </button>
+        <button id="helpTab" class="tablinks" onclick="helpPic()"> Help </button>
+
+        <style>
+          div.tab{
+      	     overflow: hidden;
+      	     background-color: black;
+          }
+
+          div.tab button{
+      	     background-color: #999966;
+      	     float: left;
+      	     cursor: pointer;
+      	     padding: 14px 16px;
+      	     transition: 0.3s;
+      	     font-size: 17px;
+          }
+      
+          div.tab button:hover{
+      	     background-color: #a3c2c2;
+          }
+
+          div.tab button.active{
+      	     background-color: #669999;
+          }
+
+        </style>
+
+        <script>
+            function encounterPic(){
+                document.getElementById("HomepagePic").src = "encounter_test.jpg";
+            }
+            function treasurePic(){
+            	document.getElementById("HomepagePic").src = "treasure_test.jpg";
+            }
+            function NPC_Pic(){
+            	document.getElementById("HomepagePic").src = "NPC_test.jpg";
+            }
+            function helpPic(){
+            	document.getElementById("HomepagePic").src = "help_test.gif"
+            }
+        </script>
+    </div>
+</div>
+
+
+
+<img src="dungeons-dragons.jpg" id="HomepagePic" style="width:600px; height:300px">
+   <style>
+    img{
+    	position: absolute;
+	    top: 230px;
+	    right: 400px;
+    }
+    </style>
+</img>
+
+<h2 style="color:blue; padding:100px">
+    Generate Stuff for your D&D party fast
+    <style>
+    h2{
+    	position: absolute;
+    	top: 460px;
+    	right: 400px;
+    }
+    </style>
+</h2>
+
+
