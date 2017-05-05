@@ -79,19 +79,83 @@
 <div id="encounterBar" class="sidenav">
     <button type="button"> Reset </button>
 
-    <a href="#"> Party </a>
-    <a href="#"> Monster </a>
+    <h3 style="color:#5e6166;"> Party </h3>
+        <form>
+           size:<br><input type="text" name="party_size"><br>
+           level:<br><input type="text" name="party_level"><br>
+        </form>
+    
+    <h3 style="color:#5e6166;"> Monster </h3>
     <a href="#"> __difficulty </a>
+        <select>
+           <option value="easy"> Easy </option>
+           <option value="medium"> Medium </option>
+           <option value="difficult"> Difficult </option>
+           <option value="deadly"> Deadly </option>
+        </select>
     <a href="#"> __alignment </a>
+        <select>
+           <option value="any"> Any </option>
+           <option value="lawful"> Lawful </option>
+           <option value="neutral"> Neutral </option>
+           <Option value="chaotic"> Chaotic </Option>
+        </select>
+        <select>
+           <option value="any"> Any </option>
+           <option value="good"> Good </option>
+           <option value="neutral"> Neutral </option>
+           <option value="evil"> Evil </option>
+        </select>	
     <a href="#"> __size </a>
+        <select>
+           <option value="any_size"> Any Size </option>
+           <option value="tiny"> Tiny </option>
+           <option value="small"> Small </option>
+           <option value="medium"> Medium </option>
+           <option value="large"> Large </option>
+           <option value="huge"> Huge </option>
+           <option value="gargantuan"> Gargantuan </option>
+        </select>
     <a href="#"> __type </a>
+        <select>
+           <option value="any_type"> Any Type </option>
+           <option value="aberation"> Aberration </option>
+           <option value="beast"> Beast </option>
+           <option value="celestial"> Celestial </option>
+           <option value="construct"> Construct </option>
+           <option value="dragon"> Dragon </option>
+           <option value="elemental"> Elemental </option>
+           <option value="fey"> Fey </option>
+           <option value="fiend"> Fiend </option>
+           <option value="giant"> Giant </option>
+           <option value="humanoid"> Humanoid </option>
+           <option value="ooze"> Ooze </option>
+           <option value="plant"> Plant </option>
+           <option value="undead"> Undead </option>
+        </select>
     <a href="#"> __environment </a>
-
+        <select>
+           <option value="any_env"> Any Environment </option>
+           <option value="arctic"> Arctic </option>
+           <option value="coastal"> Coastal </option>
+           <option value="desert"> Desert </option>
+           <option value="forest"> Forest </option>
+           <option value="grassland"> Grassland </option>
+           <option value="hill"> Hill </option>
+           <option value="mountain"> Mountain </option>
+           <option value="swamp"> Swamp </option>
+           <option value="underdark"> Underdark </option>
+           <option value="underwater"> Underwater </option>
+           <option value="urban"> Urban </option>        
+        </select>
+    
     <button type="button"> Generate </button>
 </div>
 
 <div id="lootBar" class="sidenav">
-    <a href="#"> CR </a>
+    <form>
+        Challenge Rating:<br><input type="text" name="challenge_level"><br>
+    </form>
 </div>
 
 <div id="NPC_Bar" class="sidenav">
