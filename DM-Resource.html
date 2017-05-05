@@ -1,78 +1,133 @@
+<html>
+	<head>
+		<title> Dungeon Master Resource </title>
+		<style>
+			div.tab{
+      	       overflow: hidden;
+      	       background-color: black;
+            }
 
-<div style="background-color:black; color:white; padding:30px;">
+            div.tab button{
+      	       background-color: #dee3ed;
+      	       float: left;
+      	       cursor: pointer;
+      	       padding: 14px 16px;
+      	       transition: 0.3s;
+      	       font-size: 17px;
+            }
+      
+            div.tab button:hover{
+      	       background-color: #a3c2c2;
+            }
+
+            div.tab button.active{
+      	       background-color: #669999;
+      	    }
+
+      	    .sidenav{
+    		   height: 100%;
+    		   width: 0;
+    		   position: fixed;
+    	       z-index: 1;
+    		   top:180;
+    		   left:10;
+    	       background-color:#dee3ed;
+    		   overflow-x: hidden;
+    		   transition: 0.5s;
+    		   padding-top: 10px;
+       	    }
+
+       	    .sidenav a{
+       		   padding: 4px, 4px, 4px, 18px;
+       		   font-size: 25px;
+       		   color:#5e6166;
+       		   display:block;
+       		   transition:0.3s;
+       	    }
+		</style>
+    </head>
+
+
+<div style="background-color:black; color:white; padding:20px;">
 	<h1>
 		Dungeon Master Resource
 	</h1>
+</div>
 
-	<div class="tab">
-        <button id="encounterTab" class="tablinks" onclick="encounterPic()"> Encounter </button>
-        <button id="treasureTab" class="tablinks" onclick="treasurePic()"> Treasures </button>
-        <button id="npcTab" class="tablinks" onclick="NPC_Pic()"> NPCs </button>
-        <button id="helpTab" class="tablinks" onclick="helpPic()"> Help </button>
-
-        <style>
-          div.tab{
-      	     overflow: hidden;
-      	     background-color: black;
-          }
-
-          div.tab button{
-      	     background-color: #999966;
-      	     float: left;
-      	     cursor: pointer;
-      	     padding: 14px 16px;
-      	     transition: 0.3s;
-      	     font-size: 17px;
-          }
-      
-          div.tab button:hover{
-      	     background-color: #a3c2c2;
-          }
-
-          div.tab button.active{
-      	     background-color: #669999;
-          }
-
-        </style>
+	<div class="tab" style="background-color:#dee3ed;">
+        <button id="encounterTab" class="tablinks" onclick="openEncounterBar()"> Encounter </button>
+        <button id="treasureTab" class="tablinks" onclick="openLootBar()"> Treasures </button>
+        <button id="npcTab" class="tablinks" onclick="open_NPC_Bar()"> NPCs </button>
+        <button id="helpTab" class="tablinks" onclick="openHelpBar()"> Help </button>
 
         <script>
-            function encounterPic(){
-                document.getElementById("HomepagePic").src = "encounter_test.jpg";
+            function openEncounterBar(){
+            	document.getElementById("encounterBar").style.width="350px";
             }
-            function treasurePic(){
-            	document.getElementById("HomepagePic").src = "treasure_test.jpg";
+            function openLootBar(){
+            	document.getElementById("lootBar").style.width="350px";
             }
-            function NPC_Pic(){
-            	document.getElementById("HomepagePic").src = "NPC_test.jpg";
+            function open_NPC_Bar(){
+            	document.getElementById("NPC_Bar").style.width="350px";
             }
-            function helpPic(){
-            	document.getElementById("HomepagePic").src = "help_test.gif"
+            function openHelpBar(){
+            	document.getElementById("helpBar").style.width="350px";
             }
         </script>
     </div>
+
+<div id="encounterBar" class="sidenav">
+    <button type="button"> Reset </button>
+
+    <a href="#"> Party </a>
+    <a href="#"> Monster </a>
+    <a href="#"> __difficulty </a>
+    <a href="#"> __alignment </a>
+    <a href="#"> __size </a>
+    <a href="#"> __type </a>
+    <a href="#"> __environment </a>
+
+    <button type="button"> Generate </button>
+</div>
+
+<div id="lootBar" class="sidenav">
+    <a href="#"> CR </a>
+</div>
+
+<div id="NPC_Bar" class="sidenav">
+    <a href="#"> __race </a>
+    <a href="#"> __class </a>
+    <a href="#"> __background </a>
+    <a href="#"> __gender </a>
+</div>
+
+<div id="helpBar" class="sidenav">
+    <a href="#"> what is this i dont even... </a>
 </div>
 
 
+<div id="main" style="background-color:black;">
+    <img src="dungeons-dragons.jpg" id="HomepagePic" style="width:600px; height:300px">
+       <style>
+          img{
+    	     position: absolute;
+	         top: 230px;
+	         right: 400px;
+          }
+       </style>
+    </img>
 
-<img src="dungeons-dragons.jpg" id="HomepagePic" style="width:600px; height:300px">
-   <style>
-    img{
-    	position: absolute;
-	    top: 230px;
-	    right: 400px;
-    }
-    </style>
-</img>
-
-<h2 style="color:blue; padding:100px">
-    Generate Stuff for your D&D party fast
-    <style>
-    h2{
-    	position: absolute;
-    	top: 460px;
-    	right: 400px;
-    }
-    </style>
-</h2>
+    <h2 style="color:blue; padding:100px">
+       Generate Stuff for your D&D party fast
+       <style>
+          h2{
+    	    position: absolute;
+    	    top: 460px;
+    	    right: 400px;
+          }
+       </style>
+    </h2>
+</div>
+</html>
 
 
