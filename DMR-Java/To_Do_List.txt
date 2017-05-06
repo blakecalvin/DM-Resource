@@ -1,0 +1,7 @@
+Things to work on:
+1.Encounter generator
+  -Rename DMR.java to Encounter.java
+2.Loot generator
+  -
+3.NPC generator
+  -
