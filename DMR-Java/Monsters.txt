@@ -233,9 +233,9 @@ Hell Hound=Medium=Fiend=LE=3=700=182=
 Hobgoblin Captain=Medium=Humanoid=LE=3=700=186=
 Hook Horror=Large=Monstrosity=N=3=700=189=
 Killer Whale=Huge=Beast=Unaligned=3=700=331=
-Manticore	Large=Monstrosity=LE=3=700=213=
+Manticore=Large=Monstrosity=LE=3=700=213=
 Minotaur=Large=Monstrosity=CE=3=700=223=
-Mummy	Medium=Undead=LE=3=700=228=
+Mummy=Medium=Undead=LE=3=700=228=
 Nightmare=Large=Fiend=NE=3=700=235=
 Owlbear=Large=Monstrosity=Unaligned=3=700=249=
 Phase Spider=Large=Monstrosity=Unaligned=3=700=334=
@@ -321,7 +321,7 @@ Drow Mage=Medium=Humanoid=NE=7=2900=129=
 Giant Ape=Huge=Beast=Unaligned=7=2900=323=
 Grick Alpha=Large=Monstrosity=N=7=2900=173=
 Mind Flayer=Medium=Aberration=LE=7=2900=222=
-Oni	Large=Giant=LE=7=2900=239=
+Oni=Large=Giant=LE=7=2900=239=
 Shield Guardian=Large=Construct=Unaligned=7=2900=271=
 Stone Giant=Huge=Giant=N=7=2900=156=
 Young Black Dragon=Large=Dragon=CE=7=2900=88=
