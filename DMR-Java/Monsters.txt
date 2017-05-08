@@ -176,7 +176,7 @@ Centaur=Large=Monstrosity=NG=2=450=38=
 Ettercap=Medium=Monstrosity=NE=2=450=131=
 Gargoyle=Medium=Elemental=CE=2=450=140=
 Gelatinous Cube=Large=Ooze=Unaligned=2=450=242
-Ghast	Medium=Undead=CE=2=450=148=
+Ghast=Medium=Undead=CE=2=450=148=
 Giant Boar=Large=Beast=Unaligned=2=450=323=
 Giant Constrictor Snake=Huge=Beast=Unaligned=2=450=324=
 Giant Elk=Huge=Beast=Unaligned=2=450=325=
@@ -227,8 +227,8 @@ Doppelganger=Medium=Monstrosity=N=3=700=82=
 Giant Scorpion=Large=Beast=Unaligned=3=700=327=
 Githyanki Warrior=Medium=Humanoid=LE=3=700=160=
 Gold Dragon Wyrmling=Medium=Dragon=LG=3=700=115=
-Green Hag	Medium=Fey=NE=3=700=177=
-Grell	Medium	Aberration=NE=3=700=172=
+Green=Hag=Medium=Fey=NE=3=700=177=
+Grell=Medium=Aberration=NE=3=700=172=
 Hell Hound=Medium=Fiend=LE=3=700=182=
 Hobgoblin Captain=Medium=Humanoid=LE=3=700=186=
 Hook Horror=Large=Monstrosity=N=3=700=189=
