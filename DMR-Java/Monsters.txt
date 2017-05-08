@@ -92,127 +92,127 @@ Swarm of Bats=Medium=Beast=Unaligned=1/4=50=337=
 Swarm of Rats=Medium=Beast=Unaligned=1/4=50=339=
 Swarm of Ravens=Medium=Beast=Unaligned=1/4=50=339=
 Troglodyte=Medium=Humanoid=troglodyte=CE=1/4=50=290=
-Violet Fungus	Medium	Plant		Unaligned	1/4	50	mm 138
-Winged Kobold	Small	Humanoid	kobold	LE	1/4	50	mm 195
-Wolf	Medium	Beast		Unaligned	1/4	50	mm 341
-Zombie	Medium	Undead		NE	1/4	50	mm 316
-Ape	Medium	Beast		Unaligned	1/2	100	mm 317
-Black Bear	Medium	Beast		Unaligned	1/2	100	mm 318
-Cockatrice	Small	Monstrosity		Unaligned	1/2	100	mm 42
-Crocodile	Large	Beast		Unaligned	1/2	100	mm 320
-Darkmantle	Small	Monstrosity		Unaligned	1/2	100	mm 46
-Dust Mephit	Small	Elemental		NE	1/2	100	mm 215
-Gas Spore	Large	Plant		Unaligned	1/2	100	mm 138
-Giant Goat	Large	Beast		Unaligned	1/2	100	mm 326
-Giant Sea Horse	Large	Beast		Unaligned	1/2	100	mm 328
-Giant Wasp	Medium	Beast		Unaligned	1/2	100	mm 329
-Gnoll	Medium	Humanoid	gnoll	CE	1/2	100	mm 163
-Gray Ooze	Medium	Ooze		Unaligned	1/2	100	mm 243
-Hobgoblin	Medium	Humanoid	goblinoid	LE	1/2	100	mm 186
-Ice Mephit	Small	Elemental		NE	1/2	100	mm 215
-Jackalwere	Medium	Humanoid	shapechanger	CE	1/2	100	mm 193
-Lizardfolk	Medium	Humanoid	lizardfolk	N	1/2	100	mm 204
-Magma Mephit	Small	Elemental		NE	1/2	100	mm 216
-Magmin	Small	Elemental		CN	1/2	100	mm 212
-Myconid Adult	Medium	Plant		LN	1/2	100	mm 232
-Orc	Medium	Humanoid	orc	CE	1/2	100	mm 246
-Piercer	Medium	Monstrosity		Unaligned	1/2	100	mm 252
-Reef Shark	Medium	Beast		Unaligned	1/2	100	mm 336
-Rust Monster	Medium	Monstrosity		Unaligned	1/2	100	mm 262
-Sahuagin	Medium	Humanoid	sahuagin	LE	1/2	100	mm 263
-Satyr	Medium	Fey		CN	1/2	100	mm 267
-Shadow	Medium	Undead		CE	1/2	100	mm 269
-Svirfneblin	Small	Humanoid	gnome	NG	1/2	100	mm 164
-Swarm of Insects	Medium	Beast		Unaligned	1/2	100	mm 338
-Tridrone	Medium	Construct		LN	1/2	100	mm 225
-Vine Blight	Medium	Plant		NE	1/2	100	mm 32
-Warhorse	Large	Beast		Unaligned	1/2	100	mm 340
-Warhorse Skeleton	Large	Undead		LE	1/2	100	mm 273
-Worg	Large	Monstrosity		NE	1/2	100	mm 341
-Animated Armor	Medium	Construct		Unaligned	1	200	mm 19
-Brass Dragon Wyrmling	Medium	Dragon		CG	1	200	mm 106
-Brown Bear	Large	Beast		Unaligned	1	200	mm 319
-Bugbear	Medium	Humanoid	goblinoid	CE	1	200	mm 33
-Copper Dragon Wyrmling	Medium	Dragon		CG	1	200	mm 112
-Death Dog	Medium	Monstrosity		NE	1	200	mm 321
-Dire Wolf	Large	Beast		Unaligned	1	200	mm 321
-Dryad	Medium	Fey		N	1	200	mm 121
-Duergar	Medium	Humanoid	dwarf	LE	1	200	mm 122
-Fire Snake	Medium	Elemental		NE	1	200	mm 265
-Ghoul	Medium	Undead		CE	1	200	mm 148
-Giant Eagle	Large	Beast		NG	1	200	mm 324
-Giant Hyena	Large	Beast		Unaligned	1	200	mm 326
-Giant Octopus	Large	Beast   Unaligned	1	200	mm 326
-Giant Spider	Large	Beast	Unaligned	1	200	mm 328
-Giant Toad	Large   Beast	Unaligned	1	200	mm 329
-Giant Vulture	Large	Beast		NE	1	200	mm 329
-Goblin Boss	Small	Humanoid	goblinoid	NE	1	200	mm 166
-Half-ogre	Large	Giant		Any chaotic	1	200	mm 238
-Harpy	Medium	Monstrosity		CE	1	200	mm 181
-Hippogriff	Large	Monstrosity		Unaligned	1	200	mm 184
-Imp	Tiny	Fiend	devil, shapechanger	LE	1	200	mm 76
-Kuo-toa Whip	Medium	Humanoid	kuo=toa	NE	1	200	mm 200
-Lion	Large	Beast		Unaligned	1	200	mm 331
-Quadrone	Medium	Construct		LN	1	200	mm 226
-Quaggoth Spore Servant	Medium	Plant		Unaligned	1	200	mm 230
-Quasit	Tiny	Fiend	demon, shapechanger	CE	1	200	mm 63
-Scarecrow	Medium	Construct		CE	1	200	mm 268
-Specter	Medium	Undead		CE	1	200	mm 279
-Swarm of Quippers	Medium	Beast		Unaligned	1	200	mm 338
-Thri-kreen	Medium	Humanoid	thri=kreen	CN	1	200	mm 288
-Tiger	Large	Beast		Unaligned	1	200	mm 339
-Young Faerie Dragon	Tiny	Dragon		CG	1	200	mm 133
-Yuan-ti Pureblood	Medium	Humanoid	yuan=ti	NE	1	200	mm 310
-Adult Faerie Dragon	Tiny	Dragon		CG	2	450	mm 133
-Allosaurus	Large	Beast		Unaligned	2	450	mm 79
-Ankheg	Large	Monstrosity		Unaligned	2	450	mm 21
-Awakened Tree	Huge	Plant		Unaligned	2	450	mm 317
-Azer	Medium	Elemental		LN	2	450	mm 22
-Black Dragon Wyrmling	Medium	Dragon		CE	2	450	mm 88
-Bronze Dragon Wyrmling	Medium	Dragon		LG	2	450	mm 109
-Carrion Crawler	Large	Monstrosity		Unaligned	2	450	mm 37
-Cave Bear	Large	Beast		Unaligned	2	450	mm 334
-Centaur	Large	Monstrosity		NG	2	450	mm 38
-Ettercap	Medium	Monstrosity		NE	2	450	mm 131
-Gargoyle	Medium	Elemental		CE	2	450	mm 140
-Gelatinous Cube	Large	Ooze		Unaligned	2	450	mm 242
-Ghast	Medium	Undead		CE	2	450	mm 148
-Giant Boar	Large	Beast		Unaligned	2	450	mm 323
-Giant Constrictor Snake	Huge	Beast		Unaligned	2	450	mm 324
-Giant Elk	Huge	Beast		Unaligned	2	450	mm 325
-Gibbering Mouther	Medium	Aberration		N	2	450	mm 157
-Githzerai Monk	Medium	Humanoid	gith	LN	2	450	mm 161
-Gnoll Pack Lord	Medium	Humanoid	gnoll	CE	2	450	mm 163
-Green Dragon Wyrmling	Medium	Dragon		LE	2	450	mm 95
-Grick	Medium	Monstrosity		N	2	450	mm 173
-Griffon	Large	Monstrosity		Unaligned	2	450	mm 174
-Hunter Shark	Large	Beast		Unaligned	2	450	mm 330
-Intellect Devourer	Tiny	Aberration		LE	2	450	mm 191
-Lizardfolk Shaman	Medium	Humanoid	lizardfolk	N	2	450	mm 205
-Merrow	Large	Monstrosity		CE	2	450	mm 219
-Mimic	Medium	Monstrosity	shapechanger	N	2	450	mm 220
-Minotaur Skeleton	Large	Undead		LE	2	450	mm 273
-Myconid Sovereign	Large	Plant		LN	2	450	mm 232
-Nothic	Medium	Aberration		NE	2	450	mm 236
-Ochre Jelly	Large	Ooze		Unaligned	2	450	mm 243
-Ogre	Large	Giant		CE	2	450	mm 237
-Ogre Zombie	Large	Undead		NE	2	450	mm 316
-Orc Eye of Gruumsh	Medium	Humanoid	orc	CE	2	450	mm 247
-Orog	Medium	Humanoid	orc	CE	2	450	mm 247
-Pegasus	Large	Celestial		CG	2	450	mm 250
-Pentadrone	Large	Construct		LN	2	450	mm 226
-Peryton	Medium	Monstrosity		CE	2	450	mm 251
-Plesiosaurus	Large	Beast		Unaligned	2	450	mm 80
-Polar Bear	Large	Beast		Unaligned	2	450	mm 334
-Quaggoth	Medium	Humanoid	quaggoth	CN	2	450	mm 256
-Rhinoceros	Large	Beast		Unaligned	2	450	mm 336
-Rug of Smothering	Large	Construct		Unaligned	2	450	mm 20
-Saber-toothed Tiger	Large	Beast		Unaligned	2	450	mm 336
-Sahuagin Priestess	Medium	Humanoid	sahuagin	LE	2	450	mm 264
-Sea Hag	Medium	Fey		CE	2	450	mm 179
-Silver Dragon Wyrmling	Medium	Dragon		LG	2	450	mm 118
-Specter (poltergeist)	Medium	Undead		CE	2	450	mm 279
-Spined Devil	Small	Fiend	devil	LE	2	450	mm 78
+Violet Fungus=Medium=Plant=Unaligned=1/4=50=138=
+Winged Kobold=Small=Humanoid=LE=1/4=50=195=
+Wolf=Medium=Beast=Unaligned=1/4=50=341=
+Zombie=Medium=Undead=NE=1/4=50=316=
+Ape=Medium=Beast=Unaligned=1/2=100=317=
+Black Bear=Medium=Beast=Unaligned=1/2=100=318=
+Cockatrice=Small=Monstrosity=Unaligned=1/2=100=42=
+Crocodile=Large=Beast=Unaligned=1/2=100=320=
+Darkmantle=Small=Monstrosity=Unaligned=1/2=100=46=
+Dust Mephit=Small=Elemental=NE=1/2=100=215=
+Gas Spore=Large=Plant=Unaligned=1/2=100=138=
+Giant Goat=Large=Beast=Unaligned=1/2=100=326=
+Giant Sea Horse=Large=Beast=Unaligned=1/2=100=328=
+Giant Wasp=Medium=Beast=Unaligned=1/2=100=329=
+Gnoll	Medium=Humanoid=gnoll=CE=1/2=100=163=
+Gray Ooze=Medium=Ooze=Unaligned=1/2=100=243=
+Hobgoblin=Medium=Humanoid=goblinoid=LE=1/2=100=186=
+Ice Mephit=Small=Elemental=NE=1/2=100=215=
+Jackalwere=Medium=Humanoid=shapechanger=CE=1/2=100=193=
+Lizardfolk=Medium=Humanoid=lizardfolk=N=1/2=100=204=
+Magma=Mephit=Small=Elemental=NE=1/2=100=216=
+Magmin=Small=Elemental=CN=1/2=100=212=
+Myconid=Adult=Medium=Plant=LN=1/2=100=232=
+Orc=Medium=Humanoid=CE=1/2=100=246=
+Piercer=Medium=Monstrosity=Unaligned=1/2=100=252=
+Reef Shark=Medium=Beast=Unaligned=1/2=100=336=
+Rust Monster=Medium=Monstrosity=Unaligned=1/2=100=262=
+Sahuagin=Medium=Humanoid=LE=1/2=100=263=
+Satyr=Medium=Fey=CN=1/2=100=267=
+Shadow=Medium=Undead=CE=1/2=100=269=
+Svirfneblin=Small=Humanoid=gnome=NG=1/2=100=164=
+Swarm of Insects=Medium=Beast=Unaligned=1/2=100=338=
+Tridrone=Medium=Construct=LN=1/2=100=225=
+Vine Blight=Medium=Plant=NE=1/2=100=32=
+Warhorse=Large=Beast=Unaligned=1/2=100=340=
+Warhorse Skeleton=Large=Undead=LE=1/2=100=273=
+Worg=Large=Monstrosity=NE=1/2=100=341=
+Animated Armor=Medium=Construct=Unaligned=1=200=19=
+Brass Dragon Wyrmling=Medium=Dragon=CG=1=200=106=
+Brown Bear=Large=Beast=Unaligned=1=200=319=
+Bugbear=Medium=Humanoid=goblinoid=CE=1=200=33=
+Copper Dragon Wyrmling=Medium=Dragon=CG=1=200=112=
+Death Dog=Medium=Monstrosity=NE=1=200=321=
+Dire Wolf=Large=Beast=Unaligned=1=200=321=
+Dryad=Medium=Fey=N=1=200=121=
+Duergar=Medium=Humanoid=dwarf=LE=1=200=122=
+Fire Snake=Medium=Elemental=NE=1=200=265=
+Ghoul	Medium=Undead=CE=1=200=148=
+Giant Eagle=Large=Beast=NG=1=200=324=
+Giant Hyena=Large=Beast=Unaligned=1=200=326=
+Giant Octopus=Large=Beast=Unaligned=1=200=326=
+Giant Spider=Large=Beast=Unaligned=1=200=328=
+Giant Toad=Large=Beast=Unaligned=1=200=329=
+Giant Vulture=Large=Beast=NE=1=200=329=
+Goblin Boss=Small=Humanoid=NE=1=200=166=
+Half-ogre=Large=Giant=Any chaotic=1=200=238=
+Harpy=Medium=Monstrosity=CE=1=200=181=
+Hippogriff=Large=Monstrosity=Unaligned=1=200=184=
+Imp=Tiny=Fiend=LE=1=200=76=
+Kuo-toa Whip=Medium=Humanoid=NE=1=200=200=
+Lion=Large=Beast=Unaligned=1=200=331=
+Quadrone=Medium=Construct=LN=1=200=226=
+Quaggoth Spore Servant=Medium=Plant=Unaligned=1=200=30=
+Quasit=Tiny=Fiend=CE=1=200=63=
+Scarecrow=Medium=Construct=CE=1=200=268=
+Specter	Medium=Undead=CE=1=200=279=
+Swarm of Quippers=Medium=Beast=Unaligned=1=200=338=
+Thri-kreen=Medium=Humanoid=CN=1=200=288=
+Tiger=Large=Beast=Unaligned=1=200=339=
+Young Faerie Dragon=Tiny=Dragon=CG=1=200=133=
+Yuan-ti Pureblood=Medium=Humanoid=NE=1=200=310=
+Adult Faerie Dragon=Tiny=Dragon=CG=2=450=133=
+Allosaurus=Large=Beast=Unaligned=2=450=79=
+Ankheg=Large=Monstrosity=Unaligned=2=450=21=
+Awakened Tree=Huge=Plant=Unaligned=2=450=317=
+Azer=Medium=Elemental=LN=2=450=22=
+Black Dragon Wyrmling=Medium=Dragon=CE=2=450=88=
+Bronze Dragon Wyrmling=Medium=Dragon=LG=2=450=109=
+Carrion Crawler=Large=Monstrosity=Unaligned=2=450=37=
+Cave Bear=Large=Beast=Unaligned=2=450=mm=334=
+Centaur=Large=Monstrosity=NG=2=450=38=
+Ettercap=Medium=Monstrosity=NE=2=450=131=
+Gargoyle=Medium=Elemental=CE=2=450=140=
+Gelatinous Cube=Large=Ooze=Unaligned=2=450=242
+Ghast	Medium=Undead=CE=2=450=148=
+Giant Boar=Large=Beast=Unaligned=2=450=323=
+Giant Constrictor Snake=Huge=Beast=Unaligned=2=450=324=
+Giant Elk=Huge=Beast=Unaligned=2=450=325=
+Gibbering Mouther=Medium=Aberration=N=2=450=157=
+Githzerai Monk=Medium=Humanoid=LN=2=450=161=
+Gnoll Pack Lord=Medium=Humanoid=CE=2=450=163=
+Green Dragon Wyrmling=Medium=Dragon=LE=2=450=95=
+Grick=Medium=Monstrosity=N=2=450=173=
+Griffon=Large=Monstrosity=Unaligned=2=450=174=
+Hunter Shark=Large=Beast=Unaligned=2=450=330=
+Intellect Devourer=Tiny=Aberration=LE=2=450=191=
+Lizardfolk Shaman=Medium=Humanoid=N=2=450=205=
+Merrow=Large=Monstrosity=CE=2=450=219=
+Mimic=Medium=Monstrosity=N=2=450=220=
+Minotaur Skeleton=Large=Undead=LE=2=450=273=
+Myconid Sovereign=Large=Plant=LN=2=450=232=
+Nothic=Medium=Aberration=NE=2=450=236=
+Ochre Jelly=Large=Ooze=Unaligned=2=450=243=
+Ogre=Large=Giant=CE=2=450=237=
+Ogre Zombie=Large=Undead=NE=2=450=316=
+Orc Eye of Gruumsh=Medium=Humanoid=CE=2=450=247=
+Orog=Medium=Humanoid=CE=2=450=247=
+Pegasus=Large=Celestial=CG=2=450=250=
+Pentadrone=Large=Construct=LN=2=450=226=
+Peryton=Medium=Monstrosity=CE=2=450=251=
+Plesiosaurus=Large=Beast=Unaligned=2=450=80=
+Polar Bear=Large=Beast=Unaligned=2=450=334=
+Quaggoth=Medium=Humanoid=quaggoth=CN=2=450=256=
+Rhinoceros=Large=Beast=Unaligned=2=450=336=
+Rug of Smothering=Large=Construct=Unaligned=2=450=20=
+Saber-toothed Tiger=Large=Beast=Unaligned=2=450=336=
+Sahuagin Priestess=Medium=Humanoid=LE=2=450=264=
+Sea Hag=Medium=Fey=CE=2=450=179=
+Silver Dragon Wyrmling=Medium=Dragon=LG=2=450=118=
+Specter (poltergeist)=Medium=Undead=CE=2=450=279=
+Spined Devil=Small=Fiend=LE=2=450=78=
 Swarm of Poisonous Snakes	Medium	Beast		Unaligned	2	450	mm 338
 Wererat	Medium	Humanoid	human, shapechanger	LE	2	450	mm 209
 White Dragon Wyrmling	Medium	Dragon		CE	2	450	mm 102
