@@ -106,7 +106,7 @@ Gas Spore=Large=Plant=Unaligned=1/2=100=138=
 Giant Goat=Large=Beast=Unaligned=1/2=100=326=
 Giant Sea Horse=Large=Beast=Unaligned=1/2=100=328=
 Giant Wasp=Medium=Beast=Unaligned=1/2=100=329=
-Gnoll	Medium=Humanoid=gnoll=CE=1/2=100=163=
+Gnoll=Medium=Humanoid=gnoll=CE=1/2=100=163=
 Gray Ooze=Medium=Ooze=Unaligned=1/2=100=243=
 Hobgoblin=Medium=Humanoid=goblinoid=LE=1/2=100=186=
 Ice Mephit=Small=Elemental=NE=1/2=100=215=
@@ -139,7 +139,7 @@ Dire Wolf=Large=Beast=Unaligned=1=200=321=
 Dryad=Medium=Fey=N=1=200=121=
 Duergar=Medium=Humanoid=dwarf=LE=1=200=122=
 Fire Snake=Medium=Elemental=NE=1=200=265=
-Ghoul	Medium=Undead=CE=1=200=148=
+Ghoul=Medium=Undead=CE=1=200=148=
 Giant Eagle=Large=Beast=NG=1=200=324=
 Giant Hyena=Large=Beast=Unaligned=1=200=326=
 Giant Octopus=Large=Beast=Unaligned=1=200=326=
@@ -157,7 +157,7 @@ Quadrone=Medium=Construct=LN=1=200=226=
 Quaggoth Spore Servant=Medium=Plant=Unaligned=1=200=30=
 Quasit=Tiny=Fiend=CE=1=200=63=
 Scarecrow=Medium=Construct=CE=1=200=268=
-Specter	Medium=Undead=CE=1=200=279=
+Specter=Medium=Undead=CE=1=200=279=
 Swarm of Quippers=Medium=Beast=Unaligned=1=200=338=
 Thri-kreen=Medium=Humanoid=CN=1=200=288=
 Tiger=Large=Beast=Unaligned=1=200=339=
@@ -216,7 +216,7 @@ Spined Devil=Small=Fiend=LE=2=450=78=
 Swarm of Poisonous Snakes=Medium=Beast=Unaligned=2=450=338=
 Wererat=Medium=Humanoid=LE=2=450=209=
 White Dragon Wyrmling=Medium=Dragon=CE=2=450=102=
-Will-o-wisp	Tiny=Undead=CE=2=450=301=
+Will-o-wisp=Tiny=Undead=CE=2=450=301=
 Ankylosaurus=Huge=Beast=Unaligned=3=700=79=
 Basilisk=Medium=Monstrosity=Unaligned=3=700=24=
 Bearded Devil=Medium=Fiend=devil=LE=3=700=70=
@@ -234,7 +234,7 @@ Hobgoblin Captain=Medium=Humanoid=LE=3=700=186=
 Hook Horror=Large=Monstrosity=N=3=700=189=
 Killer Whale=Huge=Beast=Unaligned=3=700=331=
 Manticore	Large=Monstrosity=LE=3=700=213=
-Minotaur=Large	Monstrosity=CE=3=700=223=
+Minotaur=Large=Monstrosity=CE=3=700=223=
 Mummy	Medium=Undead=LE=3=700=228=
 Nightmare=Large=Fiend=NE=3=700=235=
 Owlbear=Large=Monstrosity=Unaligned=3=700=249=
@@ -352,7 +352,7 @@ Nycaloth=Large=Fiend=NE=9=5000=314=
 Treant=Huge=Plant=CG=9=5000=289=
 Young Blue Dragon=Large=Dragon=LE=9=5000=91=
 Young Silver=Dragon=Large=Dragon=LG=9=5000=118=
-Aboleth	Large	Aberration		LE	10	5900	mm 13
+Aboleth=Large=Aberration=LE=10=5900=13=
 Death Slaad=Medium=Aberration=CE=10=5900=278=
 Deva=Medium=Celestial=LG=10=5900=16=
 Guardian Naga=Large=Monstrosity=LG=10=5900=234=
