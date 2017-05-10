@@ -55,24 +55,13 @@
 </div>
 
 	<div class="tab" style="background-color:#dee3ed;">
-        <button id="encounterTab" class="tablinks" onclick="openEncounterBar()"> Encounter </button>
-        <button id="treasureTab" class="tablinks" onclick="openLootBar()"> Treasures </button>
-        <button id="npcTab" class="tablinks" onclick="open_NPC_Bar()"> NPCs </button>
-        <button id="helpTab" class="tablinks" onclick="openHelpBar()"> Help </button>
+        <button id="encounterTab" class="tablinks" onclick="toggleTabs('encounterTab')"> Encounter </button>
+        <button id="treasureTab" class="tablinks" onclick="toggleTabs('treasureTab')"> Treasures </button>
+        <button id="npcTab" class="tablinks" onclick="toggleTabs('npcTab')"> NPCs </button>
+        <button id="helpTab" class="tablinks" onclick="toggleTabs('helpTab')"> Help </button>
 
         <script>
-            function openEncounterBar(){
-            	document.getElementById("encounterBar").style.width="350px";
-            }
-            function openLootBar(){
-            	document.getElementById("lootBar").style.width="350px";
-            }
-            function open_NPC_Bar(){
-            	document.getElementById("NPC_Bar").style.width="350px";
-            }
-            function openHelpBar(){
-            	document.getElementById("helpBar").style.width="350px";
-            }
+            //function toggleTabs()
         </script>
     </div>
 
@@ -159,10 +148,67 @@
 </div>
 
 <div id="NPC_Bar" class="sidenav">
+    <button type="button"> Reset </button>
+
     <a href="#"> __race </a>
+    	<select>
+    		<option value="any_race"> Any </option>
+    		<option value="dragonborn"> Dragonborn </option>
+    		<option value="dwarf"> Dwarf </option>
+    		<option value="eladrin"> Eladrin </option>
+    		<option value="elf"> Elf </option>
+    		<option value="gnome"> Gnome </option>
+    		<option value="half-elf"> Half-Elf </option>
+    		<option value="half-orc"> Half-Orc </option>
+    		<option value="halfling"> Halfling </option>
+    		<option value="human"> Human </option>
+    		<option value="tiefling"> Tiefling </option>
+    	</select>
     <a href="#"> __class </a>
+        <select>
+        	<option value="any_class"> Any </option>
+        	<option value="barbarian"> Barbarian </option>
+        	<option value="bard"> Bard </option>
+        	<option value="cleric"> Cleric </option>
+        	<option value="druid"> Druid </option>
+        	<option value="fighter"> Fighter </option>
+        	<option value="mage"> Mage </option>
+        	<option value="monk"> Monk </option>
+        	<option value="paladin"> Paladin </option>
+        	<option value="ranger"> Ranger </option>
+        	<option value="sorcerer"> Sorcerer </option>
+        	<option value="thief"> Thief </option>
+        	<option value="warlock"> Warlock </option>
+        </select>
     <a href="#"> __background </a>
+        <select>
+            <option value="any_background"> Any </option>
+            <option value="acolyte"> Acolyte </option>
+            <option value="artisan"> Artisan </option>
+            <option value="bounty_hunter"> Bounty Hunter </option>
+            <option value="charlatan"> Charlatan </option>
+            <option value="commoner"> Commoner </option>
+            <option value="criminal"> Criminal </option>
+            <option value="entertainer"> Entertainer </option>
+            <option value="far_traveler"> Far Traveler </option>
+            <option value="folk_hero"> Folk Hero </option>
+            <option value="guild_artisan"> Guild Artisan </option>
+            <option value="hermit"> Hermit </option>
+            <option value="noble"> Noble </option>
+            <option value="outlander"> Outlander </option>
+            <option value="sage"> Sage </option>
+            <option value="sailor"> Sailor </option>
+            <option value="soldier"> Soldier </option>
+            <option value="urchin"> Urchin </option>
+        </select>
     <a href="#"> __gender </a>
+        <select>
+            <option value="any_gender"> Any </option>
+            <option value="male"> Male </option>
+            <option value="female"> Female </option>
+        </select>
+
+    <button type="button"> Generate </button>
 </div>
 
 <div id="helpBar" class="sidenav">
@@ -170,7 +216,7 @@
 </div>
 
 
-<div id="main" style="background-color:black;">
+<div id="main">
     <img src="dungeons-dragons.jpg" id="HomepagePic" style="width:600px; height:300px">
        <style>
           img{
