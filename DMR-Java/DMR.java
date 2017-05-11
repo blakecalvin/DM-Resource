@@ -51,24 +51,21 @@ public class DMR extends Applet{
     protected Monster generated;
 
     //CR to PEL conversions
-    protected TreeMap<Integer, Double> playerCon = new TreeMap<>();
+    protected ArrayList<Double> playerCon = new ArrayList<>();
     protected TreeMap<Double, Double> monsterCon = new TreeMap<>();
 
 
     public static void main(String[] args){
         new DMR().run();
     }
+
     public void run(){
         populate();
-
-        System.out.println(allMonster.get(6)); //For testing
-
-        genChallenge();
         selectedFilters(); //get selected filters and convert difficulty to CR
+        genChallenge();
         filter(); //sort monsters by creating subset
         random(); //randomly pick from the subset
         System.out.println(selected);
-        System.out.println(generated);
     }
 
     /**
@@ -134,11 +131,10 @@ public class DMR extends Applet{
      */
     public void selectedFilters(){
 
-        //these are values for testing only
         players = 4;
-        level = 1;
-        selDifficulty = "Easy";
-        selSize = "Any";
+        level = 5;
+        selDifficulty = "Hard";
+        selSize = "Medium";
         selAlignment = "Any";
         selType = "Any";
         selEnvironment = "1";
@@ -151,26 +147,26 @@ public class DMR extends Applet{
     public void genChallenge(){
 
         //Player PEL (level, PEL)
-        playerCon.put(1,1.0);
-        playerCon.put(2,1.5);
-        playerCon.put(3,2.5);
-        playerCon.put(4,3.0);
-        playerCon.put(5,5.0);
-        playerCon.put(6,6.0);
-        playerCon.put(7,7.0);
-        playerCon.put(8,8.0);
-        playerCon.put(9,9.0);
-        playerCon.put(10,10.0);
-        playerCon.put(11,11.0);
-        playerCon.put(12,12.0);
-        playerCon.put(13,13.0);
-        playerCon.put(14,14.0);
-        playerCon.put(15,16.0);
-        playerCon.put(16,18.0);
-        playerCon.put(17,20.0);
-        playerCon.put(18,22.0);
-        playerCon.put(19,24.0);
-        playerCon.put(20,26.0);
+        playerCon.add(1.0);
+        playerCon.add(1.5);
+        playerCon.add(2.5);
+        playerCon.add(3.0);
+        playerCon.add(5.0);
+        playerCon.add(6.0);
+        playerCon.add(7.0);
+        playerCon.add(8.0);
+        playerCon.add(9.0);
+        playerCon.add(10.0);
+        playerCon.add(11.0);
+        playerCon.add(12.0);
+        playerCon.add(13.0);
+        playerCon.add(14.0);
+        playerCon.add(16.0);
+        playerCon.add(18.0);
+        playerCon.add(20.0);
+        playerCon.add(22.0);
+        playerCon.add(24.0);
+        playerCon.add(26.0);
 
         //Monster PEL (PEL, CR)
         monsterCon.put(.33,0.0);
@@ -208,7 +204,7 @@ public class DMR extends Applet{
         monsterCon.put(200.0,29.0);
         monsterCon.put(216.0,30.0);
 
-        TPEL = players*playerCon.get(level);
+        TPEL = players*playerCon.get(level-1);
 
         if(selDifficulty.equals("Easy")){
             TMELmin = (.40)*TPEL;
@@ -234,7 +230,6 @@ public class DMR extends Applet{
                 CR.add(CRrange);
             }
         }
-
     }
 
     /**
@@ -258,8 +253,15 @@ public class DMR extends Applet{
      * Description: randomly selects monsters from filtered monster list.
      */
     public void random(){
-        Random rand = new Random();
-        generated = selected.get(rand.nextInt(selected.size()));
+        if(!selected.isEmpty()){
+            Random rand = new Random();
+            int random = rand.nextInt(selected.size());
+            generated = selected.get(random);
+            System.out.println("Generated: " + generated.name);
+        }
+        else{
+            throw new NoSuchElementException();
+        }
     }
 
     /**
