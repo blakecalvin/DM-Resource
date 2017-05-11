@@ -33,6 +33,6 @@ public class Monster {
     }
 
     public String toString(){
-        return "["+name+","+challenge+","+size+","+alignment+","+type+","+environment+","+xp+","+page+","+image+"]";
+        return "("+name+","+challenge+","+size+","+alignment+","+type+","+environment+","+xp+","+page+","+image+")";
     }
 }
