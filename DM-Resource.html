@@ -1,6 +1,9 @@
 <html>
 	<head>
+	    <!-- Website Title -->
 		<title> Dungeon Master Resource </title>
+
+		<!-- Styling for the entire webpage-->
 		<style>
 			div.tab{
       	       overflow: hidden;
@@ -47,24 +50,49 @@
 		</style>
     </head>
 
-
+<!-- The part with the Website Title-->
 <div style="background-color:black; color:white; padding:20px;">
 	<h1>
 		Dungeon Master Resource
 	</h1>
 </div>
 
+<!-- The part with tabs and their functions-->
 	<div class="tab" style="background-color:#dee3ed;">
-        <button id="encounterTab" class="tablinks" onclick="toggleTabs('encounterTab')"> Encounter </button>
-        <button id="treasureTab" class="tablinks" onclick="toggleTabs('treasureTab')"> Treasures </button>
-        <button id="npcTab" class="tablinks" onclick="toggleTabs('npcTab')"> NPCs </button>
-        <button id="helpTab" class="tablinks" onclick="toggleTabs('helpTab')"> Help </button>
+        <button id="encounterTab" class="tablinks" onclick="openEncounterTab()"> Encounter </button>
+        <button id="lootTab" class="tablinks" onclick="openLootTab('treasureTab')"> Treasures </button>
+        <button id="npcTab" class="tablinks" onclick="openNPCTab('npcTab')"> NPCs </button>
+        <button id="helpTab" class="tablinks" onclick="openHelpTab('helpTab')"> Help </button>
 
         <script>
-            //function toggleTabs()
+            function openEncounterTab(){
+            	document.getElementById("encounterBar").style.width="350px";
+            	document.getElementById("lootBar").style.width="0px";
+            	document.getElementById("NPC_Bar").style.width="0px";
+            	document.getElementById("helpBar").style.width="0px";
+            }
+            function openLootTab(){
+            	document.getElementById("encounterBar").style.width="0px";
+            	document.getElementById("lootBar").style.width="350px";
+            	document.getElementById("NPC_Bar").style.width="0px";
+            	document.getElementById("helpBar").style.width="0px";
+            }
+            function openNPCTab(){
+            	document.getElementById("encounterBar").style.width="0px";
+            	document.getElementById("lootBar").style.width="0px";
+            	document.getElementById("NPC_Bar").style.width="350px";
+            	document.getElementById("helpBar").style.width="0px";
+            }
+            function openHelpTab(){
+            	document.getElementById("encounterBar").style.width="0px";
+            	document.getElementById("lootBar").style.width="0px";
+            	document.getElementById("NPC_Bar").style.width="0px";
+            	document.getElementById("helpBar").style.width="350px";
+            }
         </script>
     </div>
 
+<!-- The Encounter Sidebar with elements-->
 <div id="encounterBar" class="sidenav">
     <button type="button"> Reset </button>
 
@@ -141,12 +169,16 @@
     <button type="button"> Generate </button>
 </div>
 
+<!-- The Loot Sidebar with elements-->
 <div id="lootBar" class="sidenav">
     <form>
         Challenge Rating:<br><input type="text" name="challenge_level"><br>
     </form>
+
+    <button type="button"> Generate </button>
 </div>
 
+<!-- The NPC Sidebar with elements-->
 <div id="NPC_Bar" class="sidenav">
     <button type="button"> Reset </button>
 
@@ -211,11 +243,12 @@
     <button type="button"> Generate </button>
 </div>
 
+<!-- The Help sidebar no elements yet-->
 <div id="helpBar" class="sidenav">
     <a href="#"> what is this i dont even... </a>
 </div>
 
-
+<!-- The part where results will be displayed (hopefully)-->
 <div id="main">
     <img src="dungeons-dragons.jpg" id="HomepagePic" style="width:600px; height:300px">
        <style>
