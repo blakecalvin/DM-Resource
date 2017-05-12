@@ -1,22 +1,43 @@
+<!-- 
+	Wayne Weidert
+    5-12-2017
+-->
+
 <html>
 	<head>
 	    <!-- Website Title -->
-		<title> Dungeon Master Resource </title>
+		<title> DUNGEON MASTER RESOURCE </title>
 
 		<!-- Styling for the entire webpage-->
 		<style>
+		    .title{
+		    	background-color: #4d0000; 
+		    	color:white; 
+		    	padding-left:80px;
+		    	padding-top: 6px;
+		    	padding-bottom: 6px;
+                font-family: "Palatino Linotype";
+		    }
+		    .subtitle{
+		    	color: #cc0000; 
+		    	padding:100px; 
+		    	font-family:"Palatino Linotype";
+		    }
 			div.tab{
       	       overflow: hidden;
-      	       background-color: black;
+      	       background: -webkit-linear-gradient(top, #dee3ed 0%, #cccccc 80%);
+
             }
 
             div.tab button{
-      	       background-color: #dee3ed;
+      	       background: -webkit-linear-gradient(top, #dee3ed 20%, #cccccc 80%);
       	       float: left;
       	       cursor: pointer;
       	       padding: 14px 16px;
       	       transition: 0.3s;
-      	       font-size: 17px;
+      	       font-size: 0.85em;
+			   color: black;
+			   font-weight: bold;
             }
       
             div.tab button:hover{
@@ -30,9 +51,9 @@
       	    .sidenav{
     		   height: 100%;
     		   width: 0;
-    		   position: fixed;
+    		   position: absolute;
     	       z-index: 1;
-    		   top:180;
+    		   top:154;
     		   left:10;
     	       background-color:#dee3ed;
     		   overflow-x: hidden;
@@ -47,84 +68,134 @@
        		   display:block;
        		   transition:0.3s;
        	    }
+
+       	    .button{
+       	    	background-color: #a0bbe8;
+       	    	border: none;
+       	    	color: black;
+       	    	margin-left:3em;
+				font-size: 18px;
+				padding-top: 0.5em;
+				padding-bottom:0.5em;
+       	    	text-align: center;
+       	    	display: inline-flex;
+       	        position: absolute;
+                right: 40px;
+       	    }
+       	    .bigLabel{
+       	    	font-size:20px;
+				padding-left: 0em;
+				padding-top: 0.5em;;
+				margin: 0px;
+       	    }
+            .tinyLabel{
+            	font-size: 15px;
+				padding-left: 1em;
+				padding-top: 0.5em;
+				margin: 0px;
+            }
+            .typing{
+            	position: relative;
+            	top: 0px;
+            }
+            .chooseOne{
+                position: relative;
+            	top: 2px;
+            }
 		</style>
     </head>
-
+<body onLoad="openHomeTab()">
 <!-- The part with the Website Title-->
-<div style="background-color:black; color:white; padding:20px;">
+<div class="title">
 	<h1>
 		Dungeon Master Resource
 	</h1>
 </div>
 
 <!-- The part with tabs and their functions-->
-	<div class="tab" style="background-color:#dee3ed;">
+	<div class="tab">
+	    <button id="homeTab" class="tablinks" onclick="openHomeTab()"> Home </button>
         <button id="encounterTab" class="tablinks" onclick="openEncounterTab()"> Encounter </button>
-        <button id="lootTab" class="tablinks" onclick="openLootTab('treasureTab')"> Treasures </button>
-        <button id="npcTab" class="tablinks" onclick="openNPCTab('npcTab')"> NPCs </button>
-        <button id="helpTab" class="tablinks" onclick="openHelpTab('helpTab')"> Help </button>
+        <button id="lootTab" class="tablinks" onclick="openLootTab()"> Treasures </button>
+        <button id="npcTab" class="tablinks" onclick="openNPCTab()"> NPCs </button>
 
         <script>
-            function openEncounterTab(){
-            	document.getElementById("encounterBar").style.width="350px";
+            function openHomeTab(){
+            	document.getElementById("homeBar").style.width="300px";
+            	document.getElementById("encounterBar").style.width="0px";
             	document.getElementById("lootBar").style.width="0px";
             	document.getElementById("NPC_Bar").style.width="0px";
-            	document.getElementById("helpBar").style.width="0px";
+
+            	document.getElementById("defaultPic").src="dungeons-dragons.jpg"
+            }
+            function openEncounterTab(){
+            	document.getElementById("homeBar").style.width="0px";
+            	document.getElementById("encounterBar").style.width="300px";
+            	document.getElementById("lootBar").style.width="0px";
+            	document.getElementById("NPC_Bar").style.width="0px";
+
+            	document.getElementById("defaultPic").src="encounter_test.jpg"
             }
             function openLootTab(){
+            	document.getElementById("homeBar").style.width="0px";
             	document.getElementById("encounterBar").style.width="0px";
-            	document.getElementById("lootBar").style.width="350px";
+            	document.getElementById("lootBar").style.width="300px";
             	document.getElementById("NPC_Bar").style.width="0px";
-            	document.getElementById("helpBar").style.width="0px";
+
+            	document.getElementById("defaultPic").src="treasure_test.jpg"
             }
             function openNPCTab(){
+            	document.getElementById("homeBar").style.width="0px";
             	document.getElementById("encounterBar").style.width="0px";
             	document.getElementById("lootBar").style.width="0px";
-            	document.getElementById("NPC_Bar").style.width="350px";
-            	document.getElementById("helpBar").style.width="0px";
-            }
-            function openHelpTab(){
-            	document.getElementById("encounterBar").style.width="0px";
-            	document.getElementById("lootBar").style.width="0px";
-            	document.getElementById("NPC_Bar").style.width="0px";
-            	document.getElementById("helpBar").style.width="350px";
+            	document.getElementById("NPC_Bar").style.width="300px";
+
+            	document.getElementById("defaultPic").src="NPC_test.jpg"
             }
         </script>
     </div>
 
+<nav>
 <!-- The Encounter Sidebar with elements-->
 <div id="encounterBar" class="sidenav">
-    <button type="button"> Reset </button>
+    <button class="button" type="button" id="encounterReset"> Reset </button>
 
-    <h3 style="color:#5e6166;"> Party </h3>
-        <form>
-           size:<br><input type="text" name="party_size"><br>
-           level:<br><input type="text" name="party_level"><br>
+    <h3 class="bigLabel"> Party </h3>
+        <h3 class="tinyLabel"> Party Size </h3> 
+        <form class="tinyLabel">
+           <input class="typing" type="text" id="party_size">
         </form>
+
+        <h3 class="tinyLabel"> Party Level </h3>
+        <form class="tinyLabel">
+           <input class="typing" type="text" id="party_level">
+        </form>
+
+    <hr>
     
-    <h3 style="color:#5e6166;"> Monster </h3>
-    <a href="#"> __difficulty </a>
-        <select>
+    <h3 class="bigLabel"> Monster </h3>
+    <h3 class="tinyLabel"> difficulty </h3>
+        <select class="chooseOne" id="encounterDiff">
            <option value="easy"> Easy </option>
            <option value="medium"> Medium </option>
            <option value="difficult"> Difficult </option>
            <option value="deadly"> Deadly </option>
         </select>
-    <a href="#"> __alignment </a>
-        <select>
+    <h3 class="tinyLabel"> alignment </h3>
+        <select class="chooseOne" id="encounterAllign1">
            <option value="any"> Any </option>
            <option value="lawful"> Lawful </option>
            <option value="neutral"> Neutral </option>
            <Option value="chaotic"> Chaotic </Option>
         </select>
-        <select>
+        <select class="chooseOne" id="encounterAllign2">
            <option value="any"> Any </option>
            <option value="good"> Good </option>
            <option value="neutral"> Neutral </option>
            <option value="evil"> Evil </option>
         </select>	
-    <a href="#"> __size </a>
-        <select>
+    <h3 class="tinyLabel"> size </h3>
+        <select class="chooseOne" id="encounterSize">
            <option value="any_size"> Any Size </option>
            <option value="tiny"> Tiny </option>
            <option value="small"> Small </option>
@@ -133,8 +204,8 @@
            <option value="huge"> Huge </option>
            <option value="gargantuan"> Gargantuan </option>
         </select>
-    <a href="#"> __type </a>
-        <select>
+    <h3 class="tinyLabel"> type </h3>
+        <select class="chooseOne" id="encounterType">
            <option value="any_type"> Any Type </option>
            <option value="aberation"> Aberration </option>
            <option value="beast"> Beast </option>
@@ -150,8 +221,8 @@
            <option value="plant"> Plant </option>
            <option value="undead"> Undead </option>
         </select>
-    <a href="#"> __environment </a>
-        <select>
+    <h3 class="tinyLabel"> environment </h3>
+        <select class="chooseOne" id="encounterEnv">
            <option value="any_env"> Any Environment </option>
            <option value="arctic"> Arctic </option>
            <option value="coastal"> Coastal </option>
@@ -166,24 +237,38 @@
            <option value="urban"> Urban </option>        
         </select>
     
-    <button type="button"> Generate </button>
+    <button class="button" type="button" id="encounterGen" onClick="getEncounter()"> Generate </button>
+
+    <script>
+          //cut and paste lines 319-335 if needed 
+          //7 values should be passed into the database 
+    </script>
 </div>
 
 <!-- The Loot Sidebar with elements-->
 <div id="lootBar" class="sidenav">
-    <form>
-        Challenge Rating:<br><input type="text" name="challenge_level"><br>
+    
+    <h3 class="bigLabel"> Treasure </h3>
+    <h3 class="tinyLabel"> Challenge Level </h3>
+    <form class="tinyLabel">
+    	<input class="typing" type="text" id="challenge_level">
     </form>
 
-    <button type="button"> Generate </button>
+    <button class="button" type="button" id="lootGen" onClick="getLoot()"> Generate </button>
+
+    <script>
+          //cut and paste lines 348-351 if needed
+          //1 value should be passed into the database
+    </script>
 </div>
 
 <!-- The NPC Sidebar with elements-->
 <div id="NPC_Bar" class="sidenav">
-    <button type="button"> Reset </button>
+    <button class="button" type="button" id="NPC_Reset"> Reset </button>
 
-    <a href="#"> __race </a>
-    	<select>
+    <h3 class="bigLabel"> NPCs </h3>
+    <h3 class="tinyLabel"> race </h3>
+    	<select class="chooseOne" id="NPC_Race">
     		<option value="any_race"> Any </option>
     		<option value="dragonborn"> Dragonborn </option>
     		<option value="dwarf"> Dwarf </option>
@@ -196,8 +281,8 @@
     		<option value="human"> Human </option>
     		<option value="tiefling"> Tiefling </option>
     	</select>
-    <a href="#"> __class </a>
-        <select>
+    <h3 class="tinyLabel"> class </h3>
+        <select class="chooseOne" id="NPC_Class">
         	<option value="any_class"> Any </option>
         	<option value="barbarian"> Barbarian </option>
         	<option value="bard"> Bard </option>
@@ -212,8 +297,8 @@
         	<option value="thief"> Thief </option>
         	<option value="warlock"> Warlock </option>
         </select>
-    <a href="#"> __background </a>
-        <select>
+    <h3 class="tinyLabel"> background </h3>
+        <select class="chooseOne" id="NPC_Back">
             <option value="any_background"> Any </option>
             <option value="acolyte"> Acolyte </option>
             <option value="artisan"> Artisan </option>
@@ -233,24 +318,43 @@
             <option value="soldier"> Soldier </option>
             <option value="urchin"> Urchin </option>
         </select>
-    <a href="#"> __gender </a>
-        <select>
+    <h3 class="tinyLabel"> gender </h3>
+        <select class="chooseOne" id="NPC_Gender">
             <option value="any_gender"> Any </option>
             <option value="male"> Male </option>
             <option value="female"> Female </option>
         </select>
 
-    <button type="button"> Generate </button>
+    <button class="button" type="button" id="NPC_Gen" onClick="getNPC()"> Generate </button>
+
+    <script>
+        //cut and paste lines 417-427 if needed
+        //4 values shpuld be passed into the database
+    </script>
 </div>
 
 <!-- The Help sidebar no elements yet-->
-<div id="helpBar" class="sidenav">
-    <a href="#"> what is this i dont even... </a>
+<div id="homeBar" class="sidenav">
+    <h4 class = "bigLabel"> Links </h4>
+	<a class = "tinyLabel" href="#"> Official Website </a>
+	<a class = "tinyLabel" href="#"> D&D Wiki </a>
+
+	<hr> 
+
+	<h4 class = "bigLabel"> Resources </h4>
+	<a class = "tinyLabel" href="#"> Monster Manual </a>
+	<a class = "tinyLabel" href="#"> DM Guide </a> 
+
+	<hr>
+
+	<h4 class = "bigLabel"> Support </h4>
+	<a class = "tinyLabel" href="#"> Help </a>
 </div>
+</nav>
 
 <!-- The part where results will be displayed (hopefully)-->
-<div id="main">
-    <img src="dungeons-dragons.jpg" id="HomepagePic" style="width:600px; height:300px">
+<div id="main" style="background-color: black;">
+    <img src="dungeons-dragons.jpg" id="defaultPic" style="width:600px; height:300px">
        <style>
           img{
     	     position: absolute;
@@ -260,7 +364,7 @@
        </style>
     </img>
 
-    <h2 style="color:blue; padding:100px">
+    <h2 class="subtitle">
        Generate Stuff for your D&D party fast
        <style>
           h2{
@@ -271,6 +375,7 @@
        </style>
     </h2>
 </div>
+</body>
 </html>
 
 
