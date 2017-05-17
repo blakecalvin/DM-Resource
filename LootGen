@@ -1,0 +1,966 @@
+function Treasure(cp, sp, ep, gp, pp, gems, art, mi)
+{
+    //Treasure properties, first five are coin values, copper, silver, electrum, gold, and platinum
+    //Last three properties are the gems, art objects, and magic items in the hoarde
+    this.cpVal = cp;
+    this.spVal = sp;
+    this.epVal = ep;
+    this.gpVal = gp;
+    this.ppVal = pp;
+    this.gemList = gems;
+    this.artList = art;
+    this.magicItems = mi;
+}
+//function for generating random numbers
+function rng(min, max)
+{
+    return Math.floor((Math.random() * max) + min);
+}
+//generation of loot on the first loot table
+function lootGen1()
+{
+    //create variables, first stores a random value between 1 and 100
+    //the next three store the coinage value for cp, sp and gp to be returned
+    //the next stores the number of gems or objects
+    //the next two store the gems and art that are rolled respectively
+    //the next two store the number and names of the magic items respectively
+    var d100 = rng(1, 100);
+    var cpVal = rng(600, 3600);
+    var spVal = rng(300, 1800);
+    var gpVal = rng(20, 120);
+    var artGemNum = 0;
+    var gemList = [];
+    var artList = [];
+    var numMI = 0;
+    var mIList = [];
+    //the following if statements decide the tables rolled on and the number of times rolled based on the d100 value
+    if(d100 > 6 && d100 < 17)
+    {
+        artGemNum = rng(2, 12);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem1();
+        }
+    }
+    //17-26
+    else if(d100 >= 17 && d100 < 27)
+    {
+        artGemNum = rng(2, 8);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art1();
+        }
+    }
+    //27-36
+    else if(d100 >= 27 && d100 < 37)
+    {
+        artGemNum = rng(2, 12);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem2();
+        }
+    }
+    //37-44
+    else if(d100 >= 37 && d100 < 45)
+    {
+        artGemNum = rng(2, 12);
+        numMI = rng(1, 6);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem1();
+        }
+        for(var i = numMI; i <= numMI; i++)
+        {
+            mIList[i] = magicItemA();
+        }
+    }
+    //45-52
+    else if(d100 >= 45 && d100 < 53)
+    {
+        artGemNum = rng(2, 8);
+        numMI = rng(1, 6);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art1();
+        }
+        for(var i = numMI; i <= numMI; i++)
+        {
+            mIList[i] = magicItemA();
+        }
+    }
+    //53-60
+    else if(d100 >= 53 && d100 < 61)
+    {
+        artGemNum = rng(2, 12);
+        numMI = rng(1, 6);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem2();
+        }
+        for(var i = numMI; i <= numMI; i++)
+        {
+            mIList[i] = magicItemA();
+        }
+    }
+    //61-65
+    else if(d100 >= 61 && d100 < 66)
+    {
+        artGemNum = rng(2, 12);
+        numMI = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem1();
+        }
+        for(var i = numMI; i <= numMI; i++)
+        {
+            mIList[i] = magicItemB();
+        }
+    }
+    //66-70
+    else if(d100 >= 66 && d100 < 71)
+    {
+        artGemNum = rng(2, 8);
+        numMI = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art1();
+        }
+        for(var i = numMI; i <= numMI; i++)
+        {
+            mIList[i] = magicItemB();
+        }
+    }
+    //71-75
+    else if(d100 >= 71 && d100 < 76)
+    {
+        artGemNum = rng(2, 12);
+        numMI = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem2();
+        }
+        for(var i = numMI; i <= numMI; i++)
+        {
+            mIList[i] = magicItemB();
+        }
+    }
+    //76-78, 2d6 10gp gems, 1d4 Magic Items C
+    else if(d100 >= 76 && d100 < 79)
+    {
+        artGemNum = rng(2, 12);
+        numMI = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem1();
+        }
+        for(var i = numMI; i <= numMI; i++)
+        {
+            mIList[i] = magicItemC();
+        }
+    }
+    //79-80, 2d4 25gp art, 1d4 Magic Items C
+    else if(d100 >= 79 && d100 < 81)
+    {
+        artGemNum = rng(2, 8);
+        numMI = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art1();
+        }
+        for(var i = numMI; i <= numMI; i++)
+        {
+            mIList[i] = magicItemC();
+        }
+    }
+    //81-85, 2d6 50gp gems, 1d4 Magic Items C
+    else if(d100 >= 81 && d100 < 86)
+    {
+        artGemNum = rng(2, 12);
+        numMI = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem2();
+        }
+        for(var i = numMI; i <= numMI; i++)
+        {
+            mIList[i] = magicItemC();
+        }
+    }
+    //86-92, 2d4 25gp art, 1d4 Magic Items F
+    else if(d100 >= 86 && d100 < 93)
+    {
+        artGemNum = rng(2, 12);
+        numMI = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art1();
+        }
+        for(var i = numMI; i <= numMI; i++)
+        {
+            mIList[i] = magicItemF();
+        }
+    }
+    //93-97, 2d6 50gp gems, 1d4 Magic Items F
+    else if(d100 >= 93 && d100 < 98)
+    {
+        artGemNum = rng(2, 12);
+        numMI = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem2();
+        }
+        for(var i = numMI; i <= numMI; i++)
+        {
+            mIList[i] = magicItemF();
+        }
+    }
+    //98-99, 2d4 25gp art, 1 Magic Item G
+    else if(d100 >= 98 && d100 < 100)
+    {
+        artGemNum = rng(2, 12);
+        numMI = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art1();
+        }
+        mIList[0] = magicItemG();
+    }
+    //100, 2d6 50gp gems, 1 Magic Item G
+    else if(d100 == 100)
+    {
+        artGemNum = rng(2, 12);
+        numMI = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem2();
+        }
+        mIList[0] = magicItemG();
+    }
+    var Loot = new Treasure(cpVal, spVal, 0, gpVal, 0, gemList, artList, mIList);
+}
+function gem1()
+{
+    var val = rng(1, 12);
+    switch(val)
+    {
+        case 1: return "Azurite";
+        case 2: return "Banded Agate";
+        case 3: return "Blue Quartz";
+        case 4: return "Eye Agate";
+        case 5: return "Hematite";
+        case 6: return "Lapis Lazuli";
+        case 7: return "Malachite";
+        case 8: return "Moss Agate";
+        case 9: return "Obsidian";
+        case 10: return "Rhodochrosite";
+        case 11: return "Tiger Eye";
+        case 12: return "Turquoise";
+        default: return "null";
+    }
+}
+function gem2()
+{
+    var val = rng(1, 12);
+    switch(val)
+    {
+        case 1: return "Bloodstone";
+        case 2: return "Carnelian";
+        case 3: return "Chalcedony";
+        case 4: return "Chrysoprase";
+        case 5: return "Citrine";
+        case 6: return "Jasper";
+        case 7: return "Moonstone";
+        case 8: return "Onyx";
+        case 9: return "Quartz";
+        case 10: return "Sardonyx";
+        case 11: return "Star Rose Quartz";
+        case 12: return "Zircon";
+        default: return "null";
+    }
+}
+function gem3()
+{
+    var val = rng(1, 10);
+    switch(val)
+    {
+        case 1: return "Amber";
+        case 2: return "Amethyst";
+        case 3: return "Chrysoberyl";
+        case 4: return "Coral";
+        case 5: return "Garnet";
+        case 6: return "Jade";
+        case 7: return "Jet";
+        case 8: return "Pearl";
+        case 9: return "Spinel";
+        case 10: return "Tournmaline";
+        default: return "null";
+    }
+}
+function gem4()
+{
+    var val = rng(1, 6);
+    switch(val)
+    {
+        case 1: return "Alexandrite";
+        case 2: return "Aquamarine";
+        case 3: return "Black Pearl";
+        case 4: return "Blue Spinel";
+        case 5: return "Peridot";
+        case 6: return "Topaz";
+        default: return "null";
+    }
+}
+function gem5()
+{
+    var val = rng(1, 12);
+    switch(val)
+    {
+        case 1: return "Black Opal";
+        case 2: return "Blue Sapphire";
+        case 3: return "Emerald";
+        case 4: return "Fire Opal";
+        case 5: return "Opal";
+        case 6: return "Star Ruby";
+        case 7: return "Star Sapphire";
+        case 8: return "Yellow Sapphire";
+        default: return "null";
+    }
+}
+function gem6()
+{
+    var val = rng(1, 12);
+    switch(val)
+    {
+        case 1: return "Black Sapphire";
+        case 2: return "Diamond";
+        case 3: return "Jacvarh";
+        case 4: return "Ruby";
+        default: return "null";
+    }
+}
+function art1()
+{
+    var val = rng(1, 10);
+    switch(val)
+    {
+        case 1: return "Silver Ewer";
+        case 2: return "Carved Bone Statuette";
+        case 3: return "Small Gold Bracelet";
+        case 4: return "Cloth-of-Gold Vestments";
+        case 5: return "Black Velvet Mast Stitched with Silver Thread";
+        case 6: return "Copper Chalice with Silver Filigree";
+        case 7: return "Pair of Engraved Bone Dice";
+        case 8: return "Small Mirror set in a Pavared Wooden Frame";
+        case 9: return "Embroided Silk Hankerchief";
+        case 10: return "Gold Locket with a Pavared Portrait Inside";
+        default: return "null";
+    }
+}
+function art2()
+{
+    var val = rng(1, 10);
+    switch(val)
+    {
+        case 1: return "Gold Ring set with Bloodstones";
+        case 2: return "Carved Ivory Statuette";
+        case 3: return "Large Gold Bracelet";
+        case 4: return "Silver Necklace with a Gemstone Pendant";
+        case 5: return "Bronze Crown";
+        case 6: return "Silk Robe with Gold Embroidery";
+        case 7: return "Large Well-Made Tapestry";
+        case 8: return "Brass Mug with Jade Inlay";
+        case 9: return "Box of Turquoise Animal Figurines";
+        case 10: return "Gold Bird Cage with Electrum Filigree";
+        default: return "null";
+    }
+}
+function art3()
+{
+    var val = rng(1, 10);
+    switch(val)
+    {
+        case 1: return "Silver Chalice set with Moonstones";
+        case 2: return "Silver-plated steel Longsword with Jet set in hilt";
+        case 3: return "Carved Harp of Exotic Wood with Ivory Inlay and Zircon Gems";
+        case 4: return "Small Gold Idol";
+        case 5: return "Gold Dragon Comb Set with Red Garnets as Eyes";
+        case 6: return "Bottle Stopper Cork Embossed with Gold Leaf and Set with Amethysts";
+        case 7: return "Ceremonial Electrum Dagger with a Black Pearl in the Pommel";
+        case 8: return "Silver and Gold Brooch";
+        case 9: return "Obsidian Statuette with Gold Fittings and Inlay";
+        case 10: return "Pavared Gold War Mask";
+        default: return "null";
+    }
+}
+function art4()
+{
+    var val = rng(1, 10);
+    switch(val)
+    {
+        case 1: return "Fine Gold Chain set with a Fire Opal";
+        case 2: return "Old Masterpiece pavaring";
+        case 3: return "Embroided Silk and Velvet mantle set with Numverous Moonstones";
+        case 4: return "Platinum Bracelet set with Jewel Chips";
+        case 5: return "Embroided Glove set with Jewel Chips";
+        case 6: return "Jeweled Anklet";
+        case 7: return "Gold Music Box";
+        case 8: return "Gold Circlet set with Four Aquamarines";
+        case 9: return "Eye Patch with a Mock Eye set in Blue Sapphire and Moonstone";
+        case 10: return "A Necklace String of Small Pink Pearls";
+        default: return "null";
+    }
+}
+function art5()
+{
+    var val = rng(1, 10);
+    switch(val)
+    {
+        case 1: return "Jeweled Gold Crown";
+        case 2: return "Jeweled Platinum Ring";
+        case 3: return "Small Gold Statuette set with Rubies";
+        case 4: return "Gold Cup Set with Emeralds";
+        case 5: return "Gold Jewelery Box with Platinum Filigree";
+        case 6: return "Pavared Gold Childs Sarcophagus";
+        case 7: return "Jade Game Board with Solid Gold Playing Pieces";
+        case 8: return "Bejeweled Ivory Drinking Horn with Gold Filigree";
+        default: return "null";
+    }
+}
+function magicItemA()
+{
+    var d100 = rng(1,100);
+    if(d100 < 51)
+        return "Potion of Healing";
+    else if(d100 >= 51 && d100 < 61)
+        return "Spell Scroll (cantrip)";
+    else if(d100 <= 61 && d100 < 71)
+        return "Potion of Climbing";
+    else if(d100 <= 71 && d100 < 91)
+        return "Spell Scroll (1st Level)";
+    else if(d100 <= 91 && d100 < 95)
+        return "Spell Scroll (2nd Level)";
+    else if(d100 <= 95 && d100 < 99)
+        return "Potion of Greater Healing";
+    else if(d100 == 99)
+        return "Bag of Holding";
+    else
+        return "Driftglobe";
+}
+function magicItemB()
+{
+    var d100 = rng(1,100);
+    if(d100 < 16)
+        return "Potion of Greater Healing";
+    else if(d100 >= 16 && d100 < 23)
+        return "Potion of Fire Breath";
+    else if(d100 >= 23 && d100 < 30)
+        return "Potion of Resistance";
+    else if(d100 >= 30 && d100 < 35)
+        return "Ammunition, +1";
+    else if(d100 >= 35 && d100 < 40)
+        return "Potion of Animal Friendship";
+    else if(d100 >= 40 && d100 < 45)
+        return "Potion of Hill Giant Strength";
+    else if(d100 >= 45 && d100 < 50)
+        return "Potion of Growth";
+    else if(d100 >= 50 && d100 < 55)
+        return "Potion of Water Breathing";
+    else if(d100 >= 55 && d100 < 60)
+        return "Spell Scroll (2nd Level)";
+    else if(d100 >= 60 && d100 < 65)
+        return "Spell Scroll (3rd Level)";
+    else if(d100 >= 65 && d100 < 68)
+        return "Bag of Holding";
+    else if(d100 >= 68 && d100 < 71)
+        return "Keoghtom's Ovarment";
+    else if(d100 >= 71 && d100 < 74)
+        return "Oil of Slipperiness";
+    else if(d100 >= 74 && d100 < 76)
+        return "Dust of Disappearance";
+    else if(d100 >= 76 && d100 < 78)
+        return "Dust of Dryness";
+    else if(d100 >= 78 && d100 < 80)
+        return "Dust of Sneexing and Choking";
+    else if(d100 >= 80 && d100 < 82)
+        return "Elemental Gem";
+    else if(d100 >= 82 && d100 < 84)
+        return "Philter of Love";
+    else if(d100 == 84)
+        return "Alchemy Jug";
+    else if(d100 == 85)
+        return "Cap of Water Breathing";
+    else if(d100 == 86)
+        return "Cloak of the Manta Ray";
+    else if(d100 == 87)
+        return "Driftglobe";
+    else if(d100 == 88)
+        return "Goggles of the Night";
+    else if(d100 == 89)
+        return "Helm of Comprehend Languages";
+    else if(d100 == 90)
+        return "Immovable Rod";
+    else if(d100 == 91)
+        return "Lantern of Revealing";
+    else if(d100 == 92)
+        return "Mariners Armor";
+    else if(d100 == 93)
+        return "Mithral Armor";
+    else if(d100 == 94)
+        return "Potion of Poison";
+    else if(d100 == 95)
+        return "Ring of Swimming";
+    else if(d100 == 96)
+        return "Robe of Useful Items";
+    else if(d100 == 97)
+        return "Rope of Climbing";
+    else if(d100 == 98)
+        return "Saddle of the Cavalier";
+    else if(d100 == 99)
+        return "Wand of Magic Detection";
+    else
+        return "Wand of Secrets";
+}
+function magicItemC()
+{
+    var d100 = rng(1,100);
+    if(d100 < 16)
+        return "Potion of Superior Healing";
+    else if(d100 >= 16 && d100 < 23)
+        return "Spell Scroll(4th Level)";
+    else if(d100 >= 23 && d100 < 28)
+        return "Ammunition, +2";
+    else if(d100 >= 28 && d100 < 33)
+        return "Potion of Clairvoyance";
+    else if(d100 >= 33 && d100 < 38)
+        return "Potion of Diminution";
+    else if(d100 >= 38 && d100 < 43)
+        return "Potion of Gaseous Form";
+    else if(d100 >= 43 && d100 < 48)
+        return "Potion of Frost Giant Strength";
+    else if(d100 >= 48 && d100 < 53)
+        return "Potion of Stone Giant Strength";
+    else if(d100 >= 53 && d100 < 58)
+        return "Potion of Heroism";
+    else if(d100 >= 58 && d100 < 63)
+        return "Potion of Invulnerability";
+    else if(d100 >= 63 && d100 < 68)
+        return "Potion of Mind Reading";
+    else if(d100 >= 68 && d100 < 73)
+        return "Spell Scroll (5th Level)";
+    else if(d100 >= 73 && d100 < 76)
+        return "Elixer of Health";
+    else if(d100 >= 76 && d100 < 79)
+        return "Oil of Etherealness";
+    else if(d100 >= 79 && d100 < 82)
+        return "Potion of Fire Giant Strength";
+    else if(d100 >= 82 && d100 < 85)
+        return "Quaal's Feather Token";
+    else if(d100 >= 85 && d100 < 88)
+        return "Scroll of Protection";
+    else if(d100 >= 88 && d100 < 90)
+        return "Bag of Beans";
+    else if(d100 >= 90 && d100 < 92)
+        return "bead of Force";
+    else if(d100 == 92)
+        return "Chime of Opening";
+    else if(d100 == 93)
+        return "Decanter of Endless Water";
+    else if(d100 == 94)
+        return "Eyes of Minute Seeing";
+    else if(d100 == 95)
+        return "Folding Boat";
+    else if(d100 == 96)
+        return "Heward's Handy Haversack";
+    else if(d100 == 97)
+        return "Horseshoes of Speed";
+    else if(d100 == 98)
+        return "Necklace of Fireballs";
+    else if(d100 == 99)
+        return "Periapt of Health";
+    else
+        return "Sending Stones";
+}
+function magicItemD()
+{
+    var d100 = rng(1,100);
+    if(d100 < 21)
+        return "Potion of Supreme Healing";
+    else if(d100 >= 21 && d100 < 31)
+        return "Potion of Invisibility";
+    else if(d100 >= 31 && d100 < 41)
+        return "Potion of Speed";
+    else if(d100 >= 41 && d100 < 51)
+        return "Spell Scroll (6th Level)";
+    else if(d100 >= 51 && d100 < 58)
+        return "Spell Scroll (7th Level)";
+    else if(d100 >= 58 && d100 < 63)
+        return "Ammunition. +3";
+    else if(d100 >= 63 && d100 < 68)
+        return "Oil of Sharpness";
+    else if(d100 >= 68 && d100 < 73)
+        return "Potion of Flying";
+    else if(d100 >= 73 && d100 < 78)
+        return "Potion of Cloud Giant Strength";
+    else if(d100 >= 78 && d100 < 83)
+        return "Potion of Longevity";
+    else if(d100 >= 83 && d100 < 88)
+        return "Potion of Vitality";
+    else if(d100 >= 88 && d100 < 93)
+        return "Spell Scroll (8th Level)";
+    else if(d100 >= 93 && d100 < 96)
+        return "Horseshoes of a Zephyr";
+    else if(d100 >= 96 && d100 < 99)
+        return "Nolzur's Marvelous Pigments";
+    else if(d100 == 99)
+        return "Bag of Devouring";
+    else
+        return "Portable Hole";
+}
+function magicItemE()
+{
+    var d100 = rng(1,100);
+    if(d100 < 31)
+        return "Spell Scroll (8th Level)";
+    else if(d100 >= 31 && d100 < 56)
+        return "Potion of Storm Giant Strength";
+    else if(d100 >= 56 && d100 < 71)
+        return "Potion of Supreme Healing";
+    else if(d100 >= 71 && d100 < 86)
+        return "Spell Scroll (9th Level)";
+    else if(d100 >= 86 && d100 < 94)
+        return "Universal Solvent";
+    else if(d100 >= 94 && d100 < 99)
+        return "Arrow of Slaying";
+    else
+        return "Sovereign Glue";
+}
+function magicItemF()
+{
+    var d100 = rng(1, 100);
+    if(d100 < 16)
+        return "Weapon, +1";
+    else if(d100 >= 16 && d100 < 19)
+        return "Shield, +1";
+    else if(d100 >= 19 && d100 < 22)
+        return "Sentinel Shield";
+    else if(d100 >= 22 && d100 < 24)
+        return "Amulet of Proof Against Detection and Location";
+    else if(d100 >= 24 && d100 < 26)
+        return "Boots of Elvenkind";
+    else if(d100 >= 26 && d100 < 28)
+        return "Boots of Striding and Springing";
+    else if(d100 >= 28 && d100 < 30)
+        return "Bracers of Archery";
+    else if(d100 >= 30 && d100 < 32)
+        return "Brooch of Shielding";
+    else if(d100 >= 32 && d100 < 34)
+        return "Broom of Flying";
+    else if(d100 >= 34 && d100 < 36)
+        return "Cloak of Elvenkind";
+    else if(d100 >= 36 && d100 < 38)
+        return "Cloak of Protection";
+    else if(d100 >= 38 && d100 < 40)
+        return "Gauntlets of Ogre Power";
+    else if(d100 >= 40 && d100 < 42)
+        return "Hat of Disguise";
+    else if(d100 >= 42 && d100 < 44)
+        return "Javelin of Lightning";
+    else if(d100 >= 44 && d100 < 46)
+        return "Pearl of Power";
+    else if(d100 >= 46 && d100 < 48)
+        return "Rod of the Pact Keeper +1";
+    else if(d100 >= 48 && d100 < 50)
+        return "Slippers of Spider Climbing";
+    else if(d100 >= 50 && d100 < 52)
+        return "Staff of the Adder";
+    else if(d100 >= 52 && d100 < 54)
+        return "Staff of the Python";
+    else if(d100 >= 54 && d100 < 56)
+        return "Sword of Vengeance";
+    else if(d100 >= 56 && d100 < 58)
+        return "Trident of Fish Command";
+    else if(d100 >= 58 && d100 < 60)
+        return "Wand of Magic Missiles";
+    else if(d100 >= 60 && d100 < 62)
+        return "Wand of the War Mage, +1";
+    else if(d100 >= 62 && d100 < 64)
+        return "Wand of Web";
+    else if(d100 >= 64 && d100 < 66)
+        return "Weapon of Warning";
+    else if(d100 == 66)
+        return "Adamantine Armor (Chain Mail)";
+    else if(d100 == 67)
+        return "Adamantine Armor (Chain Shirt)";
+    else if(d100 == 68)
+        return "Adamantine Armor (Scale Mail)";
+    else if(d100 == 69)
+        return "Bag of Tricks (Gray)";
+    else if(d100 == 70)
+        return "Bag of Tricks (Rust)";
+    else if(d100 == 71)
+        return "Bag of Tricks (Tan)";
+    else if(d100 == 72)
+        return "Boots of the Wvarerlands";
+    else if(d100 == 73)
+        return "Circlet of Blasting";
+    else if(d100 == 74)
+        return "Deck of Illusions";
+    else if(d100 == 75)
+        return "Eversmoking Bottle";
+    else if(d100 == 76)
+        return "Eyes of Charming";
+    else if(d100 == 77)
+        return "Eyes of the Eagle";
+    else if(d100 == 78)
+        return "Figurine of Wondrous Power (Silver Raven)";
+    else if(d100 == 79)
+        return "Gem of Brightness";
+    else if(d100 == 80)
+        return "Gloves of Missile Snaring";
+    else if(d100 == 81)
+        return "Gloves of Swimming and Climbing";
+    else if(d100 == 82)
+        return "Gloves of Thievery";
+    else if(d100 == 83)
+        return "Headband of varellect";
+    else if(d100 == 84)
+        return "Helm of Telepathy";
+    else if(d100 == 85)
+        return "Instrument of the Bards (Doss Lute)";
+    else if(d100 == 86)
+        return "Instrument of the Bards (Fochlucan Bandore)";
+    else if(d100 == 87)
+        return "Instrument of the Bards (Mac-Fuimidh Cittern)";
+    else if(d100 == 88)
+        return "Medallion of thoughts";
+    else if(d100 == 89)
+        return "Necklace of Adaptation";
+    else if(d100 == 90)
+        return "Periapt of Wound Closure";
+    else if(d100 == 91)
+        return "Pipes of Haunting";
+    else if(d100 == 92)
+        return "Pipes of the Sewers";
+    else if(d100 == 93)
+        return "Ring of Jumping";
+    else if(d100 == 94)
+        return "Ring of Mind Shielding";
+    else if(d100 == 95)
+        return "Ring of Warmth";
+    else if(d100 == 96)
+        return "Ring of Water Walking";
+    else if(d100 == 97)
+        return "Quiver of Ehlonna";
+    else if(d100 == 98)
+        return "Stone of Good Luck";
+    else if(d100 == 99)
+        return "Wind Fan";
+    else
+        return "Winged Boots";
+}
+function magicItemG()
+{
+    var d8;
+    var d100 = rng(1, 100);
+    if(d100 < 12)
+        return "Weapon, +2";
+    else if(d100 >= 12 && d100 < 15)
+    {
+        d8 = rng(1,8);
+        switch (d8)
+        {
+            case 1: return "Figurine of Wondrous Power (Bronze Griffon)";
+            case 2: return "Figurine of Wondrous Power (Ebony Fly)";
+            case 3: return "Figurine of Wondrous Power (Golden Lions)";
+            case 4: return "Figurine of Wondrous Power (Ivory Goats)";
+            case 5: return "Figurine of Wondrous Power (Marble Elephant)";
+            case 6:;
+            case 7: return "Figurine of Wondrous Power (Onyx Dog)";
+            case 8: return "Figurine of Wondrous Power (Serpentine Owl)";
+            default: return "null";
+        }
+    }
+    else if(d100 == 15)
+        return "Adamantine Armor (Breastplate)";
+    else if(d100 == 16)
+        return "Adamantine Armor (Splvar)";
+    else if(d100 == 17)
+        return "Amulet of Health";
+    else if(d100 == 18)
+        return "Armor of Vulnerability";
+    else if(d100 == 19)
+        return "Arrow-Catching Shield";
+    else if(d100 == 20)
+        return "Belt of Dwarvenkind";
+    else if(d100 == 21)
+        return "Belt of Hill Giant Strength";
+    else if(d100 == 22)
+        return "Berserker Axe";
+    else if(d100 == 23)
+        return "Boots of Levitation";
+    else if(d100 == 24)
+        return "Boots of Speed";
+    else if(d100 == 25)
+        return "Bowl of Commanding Water Elementals";
+    else if(d100 == 26)
+        return "Bracers of Defense";
+    else if(d100 == 27)
+        return "Brazier of Commanding Fire Elementals";
+    else if(d100 == 28)
+        return "Cape of the Mounteback";
+    else if(d100 == 29)
+        return "Censer of Controlling Air Elementals";
+    else if(d100 == 30)
+        return "Armor, +1 Chain Mail";
+    else if(d100 == 31)
+        return "Armor of Resistance (Chain Mail)";
+    else if(d100 == 32)
+        return "Armor, +1 chain shirt";
+    else if(d100 == 33)
+        return "Armor of Resistance (Chain Shirt)";
+    else if(d100 == 34)
+        return "Cloak of Displacement";
+    else if(d100 == 35)
+        return "Cloak of the Bat";
+    else if(d100 == 36)
+        return "Cube of Force";
+    else if(d100 == 37)
+        return "Daern's Instant Fortress";
+    else if(d100 == 38)
+        return "Dagger of Venom";
+    else if(d100 == 39)
+        return "Dimensional Shackles";
+    else if(d100 == 40)
+        return "Dragon Slayer";
+    else if(d100 == 41)
+        return "Elven Chain";
+    else if(d100 == 42)
+        return "Flame Tongue";
+    else if(d100 == 43)
+        return "Gem of Seeing";
+    else if(d100 == 44)
+        return "Giant Slayer";
+    else if(d100 == 45)
+        return "Glamoured Studded Leather";
+    else if(d100 == 46)
+        return "Helmn of Teleportation";
+    else if(d100 == 47)
+        return "Horn of Blasting";
+    else if(d100 == 48)
+        return "Horn of Valhalla";
+    else if(d100 == 49)
+        return "Instrument of the Bards (Canaith Mandolin)";
+    else if(d100 == 50)
+        return "Instrument of the Bards (Cli Lyre)";
+    else if(d100 == 51)
+        return "Ioun Stone (Awareness)";
+    else if(d100 == 52)
+        return "Ioun Stone (Protection)";
+    else if(d100 == 53)
+        return "Ioun Stone (Reserve)";
+    else if(d100 == 54)
+        return "Ioun Stone (Sustenance)";
+    else if(d100 == 55)
+        return "Iron Bands of Bilarro";
+    else if(d100 == 56)
+        return "Armor, +1 Leather";
+    else if(d100 == 57)
+        return "Armor of Resistance (Leather)";
+    else if(d100 == 58)
+        return "Mace of Disruption";
+    else if(d100 == 59)
+        return "Mace of Smiting";
+    else if(d100 == 60)
+        return "Mace of Terror";
+    else if(d100 == 61)
+        return "Mantle of Spell Resistance";
+    else if(d100 == 62)
+        return "Necklace of Prayer Beads";
+    else if(d100 == 63)
+        return "Periapt of Proof Against Poison";
+    else if(d100 == 64)
+        return "Ring of Animal Influence";
+    else if(d100 == 65)
+        return "Ring of Evasion";
+    else if(d100 == 66)
+        return "Ring of Feather Falling";
+    else if(d100 == 67)
+        return "Ring of Free Action";
+    else if(d100 == 68)
+        return "Ring of Protection";
+    else if(d100 == 69)
+        return "Ring of Resistance";
+    else if(d100 == 70)
+        return "Ring od Spell Storing";
+    else if(d100 == 71)
+        return "Ring of the Ram";
+    else if(d100 == 72)
+        return "Ring of X-ray Vision";
+    else if(d100 == 73)
+        return "Robe of Eyes";
+    else if(d100 == 74)
+        return "Rod of Rulership";
+    else if(d100 == 75)
+        return "Rod of the Pact Keeper, +2";
+    else if(d100 == 76)
+        return "Rope of Entanglement";
+    else if(d100 == 77)
+        return "Armor, +1 Scale Mail";
+    else if(d100 == 78)
+        return "Armor of Resistance";
+    else if(d100 == 79)
+        return "Shield, +2";
+    else if(d100 == 80)
+        return "Shield of Missile Attraction";
+    else if(d100 == 81)
+        return "Staff of Charming";
+    else if(d100 == 82)
+        return "Staff of Healing";
+    else if(d100 == 83)
+        return "Staff of Swarming Insects";
+    else if(d100 == 84)
+        return "Staff of the Woodlands";
+    else if(d100 == 85)
+        return "Staff of Withering";
+    else if(d100 == 86)
+        return "Stone of Controlling Earth Elementals";
+    else if(d100 == 87)
+        return "Sun Blade";
+    else if(d100 == 88)
+        return "Sword of Life Stealing";
+    else if(d100 == 89)
+        return "Sword of Wounding";
+    else if(d100 == 90)
+        return "Tentacle Rod";
+    else if(d100 == 91)
+        return "Vicious Weapon";
+    else if(d100 == 92)
+        return "Wand of Binding";
+    else if(d100 == 93)
+        return "Wand of Enemy Detection";
+    else if(d100 == 94)
+        return "Wand of Fear";
+    else if(d100 == 95)
+        return "Wand of Fireballs";
+    else if(d100 == 96)
+        return "Wand of Lightning Bolts";
+    else if(d100 == 97)
+        return "Wand of Paralysis";
+    else if(d100 == 98)
+        return "Wand of the War Mage, +2";
+    else if(d100 == 99)
+        return "Wand of Wonder";
+    else
+        return "Wings of Flying";
+}
+function magicItemH()
+{
+    var d100 = rng(1,100);
+    return "null";
+}
+function magicItemI()
+{
+    return "null";
+}
+
+
