@@ -69,7 +69,7 @@ function lootGen1()
         {
             gemList[i] = gem1();
         }
-        for(var i = numMI; i <= numMI; i++)
+        for(var i = 0; i <= numMI; i++)
         {
             mIList[i] = magicItemA();
         }
@@ -83,7 +83,7 @@ function lootGen1()
         {
             artList[i] = art1();
         }
-        for(var i = numMI; i <= numMI; i++)
+        for(var i = 0; i <= numMI; i++)
         {
             mIList[i] = magicItemA();
         }
@@ -97,7 +97,7 @@ function lootGen1()
         {
             gemList[i] = gem2();
         }
-        for(var i = numMI; i <= numMI; i++)
+        for(var i = 0; i <= numMI; i++)
         {
             mIList[i] = magicItemA();
         }
@@ -111,7 +111,7 @@ function lootGen1()
         {
             gemList[i] = gem1();
         }
-        for(var i = numMI; i <= numMI; i++)
+        for(var i = 0; i <= numMI; i++)
         {
             mIList[i] = magicItemB();
         }
@@ -125,7 +125,7 @@ function lootGen1()
         {
             artList[i] = art1();
         }
-        for(var i = numMI; i <= numMI; i++)
+        for(var i = 0; i <= numMI; i++)
         {
             mIList[i] = magicItemB();
         }
@@ -139,7 +139,7 @@ function lootGen1()
         {
             gemList[i] = gem2();
         }
-        for(var i = numMI; i <= numMI; i++)
+        for(var i = 0; i <= numMI; i++)
         {
             mIList[i] = magicItemB();
         }
@@ -153,7 +153,7 @@ function lootGen1()
         {
             gemList[i] = gem1();
         }
-        for(var i = numMI; i <= numMI; i++)
+        for(var i = 0; i <= numMI; i++)
         {
             mIList[i] = magicItemC();
         }
@@ -167,7 +167,7 @@ function lootGen1()
         {
             artList[i] = art1();
         }
-        for(var i = numMI; i <= numMI; i++)
+        for(var i = 0; i <= numMI; i++)
         {
             mIList[i] = magicItemC();
         }
@@ -195,7 +195,7 @@ function lootGen1()
         {
             artList[i] = art1();
         }
-        for(var i = numMI; i <= numMI; i++)
+        for(var i = 0; i <= numMI; i++)
         {
             mIList[i] = magicItemF();
         }
@@ -209,7 +209,7 @@ function lootGen1()
         {
             gemList[i] = gem2();
         }
-        for(var i = numMI; i <= numMI; i++)
+        for(var i = 0; i <= numMI; i++)
         {
             mIList[i] = magicItemF();
         }
