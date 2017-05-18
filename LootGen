@@ -956,7 +956,156 @@ function magicItemG()
 function magicItemH()
 {
     var d100 = rng(1,100);
-    return "null";
+    var coin;
+    if(d100 < 11)
+        return "Weapon, +3";
+    else if(d100 >= 11 && d100 < 13)
+        return "Amulet of the Planes";
+    else if(d100 >= 13 && d100 < 15)
+        return "Carpet of Flying";
+    else if(d100 >= 15 && d100 < 17)
+        return "Crystal Ball";
+    else if(d100 >= 17 && d100 < 19)
+        return "Ring of Regeneration";
+    else if(d100 >= 19 && d100 < 21)
+        return "Ring of Shooting Stars";
+    else if(d100 >= 21 && d100 < 23)
+        return "Ring of Telekinesis";
+    else if(d100 >= 23 && d100 < 25)
+        return "Robe of Scintillating Colors";
+    else if(d100 >= 25 && d100 < 27)
+        return "Robe of Stars";
+    else if(d100 >= 27 && d100 < 29)
+        return "Robe of Absorbtion";
+    else if(d100 >= 29 && d100 < 31)
+        return "Rod of Alertness";
+    else if(d100 >= 31 && d100 < 33)
+        return "Rod of Security";
+    else if(d100 >= 33 && d100 < 35)
+        return "Rod of the Pact Keeper, +3";
+    else if(d100 >= 35 && d100 < 37)
+        return "Scimitar of Speed";
+    else if(d100 >= 37 && d100 < 39)
+        return "Shield, +3";
+    else if(d100 >= 39 && d100 < 41)
+        return "Staff of Fire";
+    else if(d100 >= 41 && d100 < 43)
+        return "Staff of Frost";
+    else if(d100 >= 43 && d100 < 45)
+        return "Staff of Power";
+    else if(d100 >= 45 && d100 < 47)
+        return "Staff of Striking";
+    else if(d100 >= 47 && d100 < 49)
+        return "Staff of Thunder and Lightning";
+    else if(d100 >= 49 && d100 < 51)
+        return "Sword of Sharpnes";
+    else if(d100 >= 51 && d100 < 53)
+        return "Wand of Polymorph";
+    else if(d100 >= 53 && d100 < 55)
+        return "Wand of the War Mage, +3";
+    else if(d100 == 55)
+        return "Adamantine Armor (Half Plate)";
+    else if(d100 == 56)
+        return "Adamantine Armor (Plate)";
+    else if(d100 == 57)
+        return "Animated Shield";
+    else if(d100 == 58)
+        return "Belt of Fire Giant Strength";
+    else if(d100 == 59)
+    {
+        coin = rng(1, 2);
+        switch (coin)
+        {
+            case 1:
+                return "Belt of Frost Giant Strength";
+            case 2:
+                return "Belt of Stone Giant Strength";
+            default:
+                return "null";
+        }
+    }
+    else if(d100 == 60)
+        return "Armor, +1 Breastplate";
+    else if(d100 == 61)
+        return "Armor of Resistance (Breastplate)";
+    else if(d100 == 62)
+        return "Candle of Invocation";
+    else if(d100 == 63)
+        return "Armor, +2 Chain Mail";
+    else if(d100 == 64)
+        return "Armor, +2 Chain shirt";
+    else if(d100 == 65)
+        return "Cloak of Arachnida";
+    else if(d100 == 66)
+        return "Dancing Sword";
+    else if(d100 == 67)
+        return "Demon Armor";
+    else if(d100 == 68)
+        return "Dragon Scale Mail";
+    else if(d100 == 69)
+        return "Dwarven Plate";
+    else if(d100 == 70)
+        return "Dwarven Thrower";
+    else if(d100 == 71)
+        return "Efreeti Bottle";
+    else if(d100 == 72)
+        return "Figurine of Wondrous Power (Obsidian Steed)";
+    else if(d100 == 73)
+        return "Frost Band";
+    else if(d100 == 74)
+        return "Helm of Brilliance";
+    else if(d100 == 75)
+        return "Horn of Valhalla (Bronze)";
+    else if(d100 == 76)
+        return "Instrument of the Bards(Anstruth Harp)";
+    else if(d100 == 77)
+        return "Ioun Stone (Absorbtion)";
+    else if(d100 == 78)
+        return "Ioun Stone (Agility)";
+    else if(d100 == 79)
+        return "Ioun Stone (Fortitude)";
+    else if(d100 == 80)
+        return "Ioun Stone (Insight)";
+    else if(d100 == 81)
+        return "Ioun Stone (Intellect)";
+    else if(d100 == 82)
+        return "Ioun Stone (Leadership)";
+    else if(d100 == 83)
+        return "Ioun Stone (Strength)";
+    else if(d100 == 84)
+        return "Armor, +2 Leather";
+    else if(d100 == 85)
+        return "Manual of Bodily Health";
+    else if(d100 == 86)
+        return "Manual of Gainful Excercise";
+    else if(d100 == 87)
+        return "Manual of Golems";
+    else if(d100 == 88)
+        return "Manual of Quickness of Action";
+    else if(d100 == 89)
+        return "Mirror of Life Trapping";
+    else if(d100 == 90)
+        return "Nine Lives Stealer";
+    else if(d100 == 91)
+        return "Oathbow";
+    else if(d100 == 92)
+        return "Armor, +2 Scale Mail";
+    else if(d100 == 93)
+        return "Spellguard Shield";
+    else if(d100 == 94)
+        return "Armor, +1 Splint";
+    else if(d100 == 95)
+        return "Armor of Resistance (Splint)";
+    else if(d100 == 96)
+        return "Armor, +1 Studded Leather";
+    else if(d100 == 97)
+        return "Armor of Resistance (Studded Leather)";
+    else if(d100 == 98)
+        return "Tome of Clear Thought";
+    else if(d100 == 99)
+        return "Tome of Leadership and Influence";
+    else
+        return "Tome of Understanding";
 }
 function magicItemI()
 {
