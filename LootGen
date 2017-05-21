@@ -1000,6 +1000,356 @@ function lootGen3()
     }
     var Loot = new Treasure(0, 0, 0, gpVal, ppVal, gemList, artList, mIList);
 }
+function lootGen4()
+{
+    var d100 = rng(1, 100);
+    var gpVal = rng(12000, 72000);
+    var ppVal = rng(8000, 48000);
+    var artGemNum = 0;
+    var gemList = [];
+    var artList = [];
+    var numMI = 0;
+    var mIList = [];
+
+    //1 - 2
+    //3 - 5, 3d6 gem5, 1d8 MIC
+    if(d100 >= 3 && d100 < 6)
+    {
+        artGemNum = rng(3, 18);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem5();
+        }
+        numMI = rng(1, 8);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemC();
+        }
+    }
+    //6 - 8, 1d10 art4, 1d8 MIC
+    else if(d100 >= 6 && d100 < 9)
+    {
+        artGemNum = rng(1, 10);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art4();
+        }
+        numMI = rng(1, 8);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemC();
+        }
+    }
+    //9 - 11, 1d4 art5, 1d8 MIC
+    else if(d100 >= 9 && d100 < 12)
+    {
+        artGemNum = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art5();
+        }
+        numMI = rng(1, 8);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemC();
+        }
+    }
+    //12 - 14, 1d8 gem6, 1d8 MIC
+    else if(d100 >= 12 && d100 < 15)
+    {
+        artGemNum = rng(1, 8);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem6();
+        }
+        numMI = rng(1, 8);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemC();
+        }
+    }
+    //15 - 22, 3d6 gem5, 1d6 MID
+    else if(d100 >= 15 && d100 < 23)
+    {
+        artGemNum = rng(3, 18);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem5();
+        }
+        numMI = rng(1, 6);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemD();
+        }
+    }
+    //23 - 30, 1d10 art4, 1d6 MID
+    else if(d100 >= 23 && d100 < 31)
+    {
+        artGemNum = rng(1, 10);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art4();
+        }
+        numMI = rng(1, 6);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemD();
+        }
+    }
+    //31 - 38, 1d4 art5, 1d6 MId
+    else if(d100 >= 31 && d100 < 39)
+    {
+        artGemNum = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art5();
+        }
+        numMI = rng(1, 6);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemD();
+        }
+    }
+    //39 - 46, 1d8 gem6, 1d6 MID
+    else if(d100 >= 40 && d100 < 47)
+    {
+        artGemNum = rng(1, 8);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem4();
+        }
+        numMI = rng(1, 6);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemD();
+        }
+    }
+    //47 - 52, 3d6 gem5, 1d6 MIE
+    else if(d100 >= 47 && d100 < 53)
+    {
+        artGemNum = rng(3, 18);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem5();
+        }
+        numMI = rng(1, 6);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemE();
+        }
+    }
+    //53 - 58, 1d10 art4, 1d6 MIE
+    else if(d100 >= 53 && d100 < 59)
+    {
+        artGemNum = rng(1, 10);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art4();
+        }
+        numMI = rng(1, 6);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemE();
+        }
+    }
+    //59 - 63, 1d4 art5, 1d6 MIE
+    else if(d100 >= 59 && d100 < 64)
+    {
+        artGemNum = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art5();
+        }
+        numMI = rng(1, 6);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemE();
+        }
+    }
+    // 64 - 68, 1d8 gem6, 1d6 MIE
+    else if(d100 >= 64 && d100 < 69)
+    {
+        artGemNum = rng(1, 8);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem6();
+        }
+        numMI = rng(1, 6);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemE();
+        }
+    }
+    //69, 3d6 gem5, 1d4 MIG
+    else if(d100 == 69)
+    {
+        artGemNum = rng(1, 18);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem5();
+        }
+        numMI = rng(1, 4);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemG();
+        }
+    }
+    //70, 1d10 art4, 1d4 MIG
+    else if(d100 == 70)
+    {
+        artGemNum = rng(1, 10);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art4();
+        }
+        numMI = rng(1, 4);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemG();
+        }
+    }
+    //71, 1d4 art5, 1d4 MIG
+    else if(d100 == 71)
+    {
+        artGemNum = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art5();
+        }
+        numMI = rng(1, 4);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemG();
+        }
+    }
+    //72, 1d8 gem6, 1d4 MIG
+    else if(d100 == 72)
+    {
+        artGemNum = rng(1, 8);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem6();
+        }
+        numMI = rng(1, 4);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemG();
+        }
+    }
+    //73 - 74, 3d6 gem5, 1d4 MIH
+    else if(d100 >= 73 && d100 < 75)
+    {
+        artGemNum = rng(3, 18);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem5();
+        }
+        numMI = rng(1, 4);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemH();
+        }
+    }
+    //75 - 76, 1d10 art4, 1d4 MIH
+    else if(d100 >= 75 && d100 < 77)
+    {
+        artGemNum = rng(1, 10);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art4();
+        }
+        numMI = rng(1, 4);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemH();
+        }
+    }
+    //77 - 78, 1d4 art5, 1d4 MIH
+    else if(d100 >= 77 && d100 < 79)
+    {
+        artGemNum = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art5();
+        }
+        numMI = rng(1, 4);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemH();
+        }
+    }
+    //79 - 80, 1d8 gem6, 1d4 MIH
+    else if(d100 >= 79 && d100 < 81)
+    {
+        artGemNum = rng(1, 8);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem6();
+        }
+        numMI = rng(1, 4);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemH();
+        }
+    }
+    //81 - 85, 3d6 gem5, 1d4 MII
+    else if(d100 >= 81 && d100 < 86)
+    {
+        artGemNum = rng(3, 18);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem5();
+        }
+        numMI = rng(1, 4);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemI();
+        }
+    }
+    //86 - 90, 1d10 art4, 1d4 MII
+    else if(d100 >= 86 && d100 < 91)
+    {
+        artGemNum = rng(1, 10);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art4();
+        }
+        numMI = rng(1, 4);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemI();
+        }
+    }
+    //91 - 95, 1d4 art5, 1d4 MII
+    else if(d100 >= 91 && d100 < 96)
+    {
+        artGemNum = rng(1, 4);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art5();
+        }
+        numMI = rng(1, 4);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemI();
+        }
+    }
+    //96 - 00, 1d8 gem6, 1d4 MII
+    else
+    {
+        artGemNum = rng(1, 8);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem6();
+        }
+        numMI = rng(1, 4);
+        for(var i = 0; i <= numMI; i++)
+        {
+            mIList[i] = magicItemI();
+        }
+    }
+    var loot = new Treasure(0, 0, 0, gpVal, gemList, artList, mIList)
+}
 function gem1()
 {
     var val = rng(1, 12);
