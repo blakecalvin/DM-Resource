@@ -238,6 +238,342 @@ function lootGen1()
     }
     var Loot = new Treasure(cpVal, spVal, 0, gpVal, 0, gemList, artList, mIList);
 }
+function lootGen2()
+{
+    var d100 = rng(1, 100);
+    var cpVal = rng(200, 1200);
+    var spVal = rng(2000, 12000);
+    var gpVal = rng(600, 3600);
+    var ppVal = rng(30, 180);
+    var artGemNum = 0;
+    var gemList = [];
+    var artList = [];
+    var numMI = 0;
+    var mIList = [];
+
+    if(d100 >= 5 && d100 < 11)
+    {
+        artGemNum = rng(2, 8);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art1();
+        }
+    }
+    else if(d100 >= 11 && d100 < 17)
+    {
+        artGemNum = rng(3, 18);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem2();
+        }
+    }
+    else if(d100 >= 17 && d100 < 23)
+    {
+        artGemNum = rng(3, 18);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem3();
+        }
+    }
+    else if(d100 >= 23 && d100 < 29)
+    {
+        artGemNum = rng(2, 8);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art2();
+        }
+    }
+    else if(d100 >= 29 && d100 < 33)
+    {
+        artGemNum = rng(2, 8);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art1();
+        }
+        numMI = rng(1 , 6);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemA();
+        }
+    }
+    else if(d100 >= 33 && d100 < 37)
+    {
+        artGemNum = rng(3, 18);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem2();
+        }
+        numMI = rng(1 , 6);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemA();
+        }
+    }
+    else if(d100 >= 37 && d100 < 41)
+    {
+        artGemNum = rng(3, 18);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem3();
+        }
+        numMI = rng(1 , 6);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemA();
+        }
+    }
+    else if(d100 >= 41 && d100 < 45)
+    {
+        artGemNum = rng(2, 8);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art2();
+        }
+        numMI = rng(1 , 6);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemA();
+        }
+    }
+    else if(d100 >= 45 && d100 < 50)
+    {
+        artGemNum = rng(2, 8);
+        for(var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art1();
+        }
+        numMI = rng(1 , 4);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemB();
+        }
+    }
+    else if(d100 >= 50 && d100 < 55)
+    {
+        artGemNum = rng(3, 18);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem2();
+        }
+        numMI = rng(1 , 4);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemB();
+        }
+    }
+    else if(d100 >= 55 && d100 < 60)
+    {
+        artGemNum = rng(3, 18);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem3();
+        }
+        numMI = rng(1 , 4);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemB();
+        }
+    }
+    else if(d100 >= 60 && d100 < 64)
+    {
+        artGemNum = rng(2, 8);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art2();
+        }
+        numMI = rng(1 , 4);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemB();
+        }
+    }
+    else if(d100 >= 64 && d100 < 67)
+    {
+        artGemNum = rng(2, 8);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art1();
+        }
+        numMI = rng(1 , 4);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemC();
+        }
+    }
+    else if(d100 >= 67 && d100 < 70)
+    {
+        artGemNum = rng(3, 18);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem2();
+        }
+        numMI = rng(1 , 4);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemC();
+        }
+    }
+    else if(d100 >= 70 && d100 < 73)
+    {
+        artGemNum = rng(3, 18);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem3();
+        }
+        numMI = rng(1 , 4);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemC();
+        }
+    }
+    else if(d100 >= 73 && d100 < 75)
+    {
+        artGemNum = rng(2, 8);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art2();
+        }
+        numMI = rng(1 , 4);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemC();
+        }
+    }
+    else if(d100 >= 75 && d100 < 77)
+    {
+        artGemNum = rng(2, 8);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art1();
+        }
+        mIList[0] = magicItemD();
+    }
+    else if(d100 >= 77 && d100 < 79)
+    {
+        artGemNum = rng(3, 18);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem2();
+        }
+        mIList[0] = magicItemD();
+    }
+    else if(d100 == 79)
+    {
+        artGemNum = rng(3, 18);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem3();
+        }
+        mIList[0] = magicItemD();
+    }
+    else if(d100 == 80)
+    {
+        artGemNum = rng(2, 8);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art2();
+        }
+        mIList[0] = magicItemD();
+    }
+    else if(d100 >= 81 && d100 < 85)
+    {
+        artGemNum = rng(2, 8);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art1();
+        }
+        numMI = rng(1 , 4);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemF();
+        }
+    }
+    else if(d100 >= 85 && d100 < 89)
+    {
+        artGemNum = rng(3, 18);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem2();
+        }
+        numMI = rng(1 , 4);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemF();
+        }
+    }
+    else if(d100 >= 89 && d100 < 92)
+    {
+        artGemNum = rng(3, 18);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem3();
+        }
+        numMI = rng(1 , 4);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemF();
+        }
+    }
+    else if(d100 >= 92 && d100 < 95)
+    {
+        artGemNum = rng(2, 8);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art2();
+        }
+        numMI = rng(1 , 4);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemF();
+        }
+    }
+    else if(d100 >= 95 && d100 < 97)
+    {
+        artGemNum = rng(3, 18);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem3();
+        }
+        numMI = rng(1 , 4);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemG();
+        }
+    }
+    else if(d100 >= 97 && d100 < 99)
+    {
+        artGemNum = rng(2, 8);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art2();
+        }
+        numMI = rng(1 , 4);
+        for(var i = 0; i <= numMi; i++)
+        {
+            mIList[i] = magicItemG();
+        }
+    }
+    else if(d100 == 99)
+    {
+        artGemNum = rng(3, 18);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            gemList[i] = gem3();
+        }
+        mIList[0] = magicItemH();
+    }
+    else
+    {
+        artGemNum = rng(2, 8);
+        for (var i = 0; i <= artGemNum; i++)
+        {
+            artList[i] = art2();
+        }
+        mIList[0] = magicItemH();
+    }
+
+    var Loot = new Treasure(cpVal, spVal, 0, gpVal, ppVal, gemList, artList, mIList);
+}
 function gem1()
 {
     var val = rng(1, 12);
@@ -1109,7 +1445,132 @@ function magicItemH()
 }
 function magicItemI()
 {
-    return "null";
+    var d100 = rng(1,100);
+    var d12;
+    if(d100 < 6)
+        return "Defender";
+    else if(d100 >= 6 && d100 < 11)
+        return "Hammer of Thunderbolts";
+    else if(d100 >= 11 && d100 < 16)
+        return "Luck Blade";
+    else if(d100 >= 16 && d100 < 21)
+        return "Sword of Answering";
+    else if(d100 >= 21 && d100 < 24)
+        return "Holy Avenger";
+    else if(d100 >= 24 && d100 < 27)
+        return "Ring of Djinni Summoning";
+    else if(d100 >= 27 && d100 < 30)
+        return "Ring of Invisibility";
+    else if(d100 >= 31 && d100 < 33)
+        return "Ring of Spell Turning";
+    else if(d100 >= 33 && d100 < 36)
+        return "Rod of Lordly Might";
+    else if(d100 >= 36 && d100 < 39)
+        return "Staff of the Magi";
+    else if(d100 >= 39 && d100 < 42)
+        return "Vorpal Sword";
+    else if(d100 >= 42 && d100 < 44)
+        return "Belt of Cloud Giant Strength";
+    else if(d100 >= 44 && d100 < 46)
+        return "Armor, +2 Breastplate";
+    else if(d100 >= 46 && d100 < 48)
+        return "Armor, +3 Chain Mail";
+    else if(d100 >= 48 && d100 < 50)
+        return "Armor, +3 Chain Shirt";
+    else if(d100 >= 50 && d100 < 52)
+        return "Cloak of Invisibility";
+    else if(d100 >= 52 && d100 < 54)
+        return "Crystal Ball (Legendary Version)";
+    else if(d100 >= 54 && d100 < 56)
+        return "Armor, +1 Half Plate";
+    else if(d100 >= 56 && d100 < 58)
+        return "Iron Flask";
+    else if(d100 >= 58 && d100 < 60)
+        return "Armor, +3 Leather";
+    else if(d100 >= 60 && d100 < 62)
+        return "Armor, +1 Plate";
+    else if(d100 >= 62 && d100 < 64)
+        return "Robe of the Archmagi";
+    else if(d100 >= 64 && d100 < 66)
+        return "Rod of Resurrection";
+    else if(d100 >= 66 && d100 < 68)
+        return "Armor, +1 Scale Mail";
+    else if(d100 >= 68 && d100 < 70)
+        return "Scarab of Protection";
+    else if(d100 >= 70 && d100 < 72)
+        return "Armor, +2 Splint";
+    else if(d100 >= 72 && d100 < 74)
+        return "Armor, +2 Studded Leather";
+    else if(d100 >= 74 && d100 < 76)
+        return "Well of Many Worlds";
+    else if(d100 == 76)
+    {
+        d12 = rng(1, 12);
+        switch (d12)
+        {
+            case 1:;
+            case 2: return "Armor, +2 Half Plate";
+            case 3:;
+            case 4: return "Armor, +2 Plate";
+            case 5:;
+            case 6: return "Armor, +3 Studded Leather";
+            case 7:;
+            case 8: return "Armor, +3 Breastplate";
+            case 9:;
+            case 10: return "Armor, +3 Splint";
+            case 11: return "Armor, +3 Half Plate";
+            case 12: return "Armor, +3 Plate";
+            default: return "null";
+        }
+    }
+    else if(d100 == 77)
+        return "Apparatus of Kwalish";
+    else if(d100 == 78)
+        return "Armor of Invulnerability";
+    else if(d100 == 79)
+        return "Belt of Storm Ginat Strength";
+    else if(d100 == 80)
+        return "Cubic Gate";
+    else if(d100 == 81)
+        return "Deck of Many Things";
+    else if(d100 == 82)
+        return "Efreeti Chain";
+    else if(d100 == 83)
+        return "Armor of Resistance (Half Plate)";
+    else if(d100 == 84)
+        return "Horn of Valhalla (Iron)";
+    else if(d100 == 85)
+        return "Instrument of the Bards (Ollamh Harp)";
+    else if(d100 == 86)
+        return "Ioun Stone (Greater Absorption)";
+    else if(d100 == 87)
+        return "Ioun Stone (Mastery)";
+    else if(d100 == 88)
+        return "Ioun Stone (Regeneration)";
+    else if(d100 == 89)
+        return "Plate Armor of Etherealness";
+    else if(d100 == 90)
+        return "Plate Armor of Resistance";
+    else if(d100 == 91)
+        return "Ring of Air Elemental Command";
+    else if(d100 == 92)
+        return "Ring of Earth Elemental Command";
+    else if(d100 == 93)
+        return "Ring of Fire Elemental Command";
+    else if(d100 == 94)
+        return "Ring of Three Wishes";
+    else if(d100 == 95)
+        return "Ring of Water Elemental Command";
+    else if(d100 == 96)
+        return "Sphere of Annihilation";
+    else if(d100 == 97)
+        return "Talisman of Pure Good";
+    else if(d100 == 98)
+        return "Talisman of the Sphere";
+    else if(d100 == 99)
+        return "Talisman of Ultimate Evil";
+    else
+        return "Tome of the Stilled Tongue";
 }
 
 
