@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Encounter</title>
-</head>
-<body>
-<h3>Encounter Generator</h3>
-
 <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
 <script>
     // Initialize Firebase
@@ -19,20 +10,19 @@
         messagingSenderId: "1041442142048"
     };
     firebase.initializeApp(config);
-
 </script>
-<script>
-    var players = 3;
-    var level = 3;
+    
+    var players = partySize;
+    var level = partyLevel;
 
-    var align1 = "Any";
-    var align2 = "Evil";
+    var align1 = mAlignmentOne;
+    var align2 = mAlignmentTwo;
 
-    var difficulty = "Deadly";
+    var difficulty = mDifficulty;
     var alignment;
-    var size = "Any";
-    var type = "Any";
-    var environment = "Any";
+    var size = mSize;
+    var type = mType;
+    var environment = mEnvi;
 
 
 
@@ -159,7 +149,123 @@
                     snapshot.forEach(function (childSnapshot) {
                         filtered.push(childSnapshot.val());
                     });
-                    return filter(filtered);
+                    console.log("by challenge: " + filtered.length);
+
+                    var filterSize = [];
+                    if(size !== "Any"){
+                        for(var i = 0; i < filtered.length; i++){
+                            if(filtered[i].Size == size){
+                                filterSize.push(filtered[i]);
+                            }
+                        }
+                    }
+                    else{
+                        filterSize = filtered;
+                    }
+                    console.log("by size: " + filterSize.length);
+
+                    var filterType = [];
+                    if(type != "Any"){
+                        for(var i = 0; i < filterSize.length; i++){
+                            if(filterSize[i].Type == type){
+                                filterType.push(filterSize[i]);
+                            }
+                        }
+                    }
+                    else{
+                        filterType = filterSize;
+                    }
+                    console.log("by type: " + filterType.length);
+
+                    var filterAlignment = [];
+                    if(alignment !== "Any" && alignment !== "Any evil" && alignment !== "Any good" && alignment !== "Any neutral"
+                        && alignment !== "Lawful Any" && alignment !== "Chaotic Any" && alignment !== "Neutral Any"){
+                        for(var i = 0; i < filterType.length; i++){
+                            if(filterType[i].Alignment == alignment){
+                                filterAlignment.push(filterType[i]);
+                            }
+                        }
+                    }
+                    else if(alignment == "Any evil" || alignment == "Any good" || alignment == "Any neutral"){
+                        var set;
+                        if(align2 == "Good"){
+                            set = ["CG","NG","LG","any good"];
+                        }
+                        else if(align2 == "Evil"){
+                            set = ["CE","NE","LE","Any evil"];
+                        }
+                        else if(align2 == "Neutral"){
+                            set = ["CN","Unaligned","LN","Any neutral"];
+                        }
+                        for(var i = 0; i < filterType.length; i++){
+                            if(filterType[i].Alignment == set[0] || filterType[i].Alignment == set[1] || filterType[i].Alignment == set[2] || filterType[i].Alignment == set[3]){
+                                filterAlignment.push(filterType[i]);
+                            }
+                        }
+                    }
+                    else if(alignment == "Lawful Any" || alignment == "Chaotic Any" || alignment == "Neutral Any") {
+                        var set;
+                        if (align1 == "Lawful") {
+                            set = ["LG", "LN", "LC"];
+                        }
+                        else if (align1 == "Chaotic") {
+                            set = ["CG", "CN", "CE"];
+                        }
+                        else if (align1 == "Neutral") {
+                            set = ["NG", "Unaligned", "NE"];
+                        }
+                        for (var i = 0; i < filterType.length; i++) {
+                            if (filterType[i].Alignment == set[0] || filterType[i].Alignment == set[1] || filterType[i].Alignment == set[2]) {
+                                filterAlignment.push(filterType[i]);
+                            }
+                        }
+                    }
+                    else{
+                        filterAlignment = filterType;
+                    }
+                    console.log("by alignment: " + filterAlignment.length);
+                    var filterEnvironment = [];
+                    if(environment != "Any" && filterAlignment.length > 1){
+                        for(var i = 0; i < filterAlignment.length; i++){
+                            var length = filterAlignment[i].Environment;
+                            for(var j = 0; j < length.length; j++){
+                                var temp = filterAlignment[i].Environment[j];
+                                if(temp == environment){
+                                    filterEnvironment.push(filterAlignment[i]);
+                                }
+                            }
+                        }
+                    }
+                    else if(environment != "Any" && filterAlignment.length == 1){
+                        for(var i = 0; i < filterAlignment[0].Environment.length; i++){
+                            if(filterAlignment[0].Environment[i] == environment){
+                                filterEnvironment.push(filterAlignment[0]);
+                            }
+                        }
+                    }
+                    else{
+                        filterEnvironment = filterAlignment;
+                    }
+                    console.log("by Environment: "+filterEnvironment.length);
+
+                    if(filterEnvironment.length != 0){
+                        var random = Math.floor((Math.random()*(filterEnvironment.length)));
+                        generated = filterEnvironment[random];
+                        genName = generated.Name;
+                        genCR = generated.Challenge;
+                        genXP = generated.XP;
+                        genPage = generated.Page;
+                        console.log("generated: " + genName + ", " + generated.Alignment + ", " + generated.Size + ", " + generated.Type + ", {" + generated.Environment + "}");
+                        document.getElementById("name").value = "Name: " + genName;
+                        document.getElementById("xp").value = "XP: " + genXP;
+                        document.getElementById("page").value = "Page: " + genPage;
+                        document.getElementById("CR").value = "CR: " + genCR;
+                        return generated;
+                    }
+                    else{
+                        genName = Error;
+                        document.getElementById("name").value = "name: " + genName;
+                    }
                 });
         }
         else {
@@ -171,102 +277,123 @@
                     snapshot.forEach(function (childSnapshot) {
                         filtered.push(childSnapshot.val());
                     });
-                    return filter(filtered);
-                });
-        }
-    }
-    function filter(filtered){
-        console.log("by challenge: " + filtered.length);
+                    console.log("by challenge: " + filtered.length);
 
-        var filterSize = [];
-        if(size !== "Any"){
-            for(var i = 0; i < filtered.length; i++){
-                if(filtered[i].Size == size){
-                    filterSize.push(filtered[i]);
-                }
-            }
-        }
-        else{
-            filterSize = filtered;
-        }
-        console.log("by size: " + filterSize.length);
-
-        var filterType = [];
-        if(type != "Any"){
-            for(var i = 0; i < filterSize.length; i++){
-                if(filterSize[i].Type == type){
-                    filterType.push(filterSize[i]);
-                }
-            }
-        }
-        else{
-            filterType = filterSize;
-        }
-        console.log("by type: " + filterType.length);
-
-        var filterAlignment = [];
-        if(alignment !== "Any" && alignment !== "Any evil" && alignment !== "Any good" && alignment !== "Any neutral"){
-            for(var i = 0; i < filterType.length; i++){
-                if(filterType[i].Alignment == alignment){
-                    filterAlignment.push(filterType[i]);
-                }
-            }
-        }
-        else if(alignment == "Any evil" || alignment == "Any good" || alignment == "Any neutral"){
-            var set;
-            if(align2 == "Good"){
-                set = ["CG","NG","LG"];
-            }
-            else if(align2 == "Evil"){
-                set = ["CE","NE","LE"];
-            }
-            else if(align2 == "Neutral"){
-                set = ["CN","Unaligned","LN"];
-            }
-            for(var i = 0; i < filterType.length; i++){
-                if(filterType[i].Alignment == set[0] || filterType[i].Alignment == set[1] || filterType[i].Alignment == set[2]){
-                    filterAlignment.push(filterType[i]);
-                }
-            }
-        }
-        else{
-            filterAlignment = filterType;
-        }
-        console.log("by alignment: " + filterAlignment.length);
-
-        var filterEnvironment = [];
-        if(environment != "Any"){
-            for(var i = 0; i < filterType.length; i++){
-                var j = 0;
-                while(filterAlignment[i].Environment[j] != null){
-                    if(filterAlignment[i].Environment[j] == environment){
-                        filterEnvironment.push(filterAlignment[i]);
+                    var filterSize = [];
+                    if(size !== "Any"){
+                        for(var i = 0; i < filtered.length; i++){
+                            if(filtered[i].Size == size){
+                                filterSize.push(filtered[i]);
+                            }
+                        }
                     }
-                    j++;
-                }
-            }
-        }
-        else{
-            filterEnvironment = filterAlignment;
-        }
+                    else{
+                        filterSize = filtered;
+                    }
+                    console.log("by size: " + filterSize.length);
 
-        if(filterEnvironment.length != 0){
-            var random = Math.floor((Math.random()*(filterEnvironment.length)));
-            generated = filterEnvironment[random];
-            genName = generated.Name;
-            genCR = generated.Challenge;
-            genXP = generated.XP;
-            genPage = generated.Page;
-            console.log("generated: " + genName + ", " + generated.Alignment + ", " + generated.Size + ", " + generated.Type + ", {" + generated.Environment + "}");
-            document.getElementById("name").value = "name: " + genName;
-            document.getElementById("xp").value = "XP: " + genXP;
-            document.getElementById("page").value = "Page: " + genPage;
-            document.getElementById("CR").value = "CR: " + genCR;
-            return generated;
-        }
-        else{
-            genName = Error;
-            document.getElementById("name").value = "name: " + genName;
+                    var filterType = [];
+                    if(type != "Any"){
+                        for(var i = 0; i < filterSize.length; i++){
+                            if(filterSize[i].Type == type){
+                                filterType.push(filterSize[i]);
+                            }
+                        }
+                    }
+                    else{
+                        filterType = filterSize;
+                    }
+                    console.log("by type: " + filterType.length);
+
+                    var filterAlignment = [];
+                    if(alignment !== "Any" && alignment !== "Any evil" && alignment !== "Any good" && alignment !== "Any neutral"
+                        && alignment !== "Lawful Any" && alignment !== "Chaotic Any" && alignment !== "Neutral Any"){
+                        for(var i = 0; i < filterType.length; i++){
+                            if(filterType[i].Alignment == alignment){
+                                filterAlignment.push(filterType[i]);
+                            }
+                        }
+                    }
+                    else if(alignment == "Any evil" || alignment == "Any good" || alignment == "Any neutral"){
+                        var set;
+                        if(align2 == "Good"){
+                            set = ["CG","NG","LG","any good"];
+                        }
+                        else if(align2 == "Evil"){
+                            set = ["CE","NE","LE","Any evil"];
+                        }
+                        else if(align2 == "Neutral"){
+                            set = ["CN","Unaligned","LN","Any neutral"];
+                        }
+                        for(var i = 0; i < filterType.length; i++){
+                            if(filterType[i].Alignment == set[0] || filterType[i].Alignment == set[1] || filterType[i].Alignment == set[2] || filterType[i].Alignment == set[3]){
+                                filterAlignment.push(filterType[i]);
+                            }
+                        }
+                    }
+                    else if(alignment == "Lawful Any" || alignment == "Chaotic Any" || alignment == "Neutral Any") {
+                        var set;
+                        if (align1 == "Lawful") {
+                            set = ["LG", "LN", "LC"];
+                        }
+                        else if (align1 == "Chaotic") {
+                            set = ["CG", "CN", "CE"];
+                        }
+                        else if (align1 == "Neutral") {
+                            set = ["NG", "Unaligned", "NE"];
+                        }
+                        for (var i = 0; i < filterType.length; i++) {
+                            if (filterType[i].Alignment == set[0] || filterType[i].Alignment == set[1] || filterType[i].Alignment == set[2]) {
+                                filterAlignment.push(filterType[i]);
+                            }
+                        }
+                    }
+                    else{
+                        filterAlignment = filterType;
+                    }
+                    console.log("by alignment: " + filterAlignment.length);
+                    var filterEnvironment = [];
+                    if(environment != "Any" && filterAlignment.length > 1){
+                        for(var i = 0; i < filterAlignment.length; i++){
+                            var length = filterAlignment[i].Environment;
+                            for(var j = 0; j < length.length; j++){
+                                var temp = filterAlignment[i].Environment[j];
+                                if(temp == environment){
+                                    filterEnvironment.push(filterAlignment[i]);
+                                }
+                            }
+                        }
+                    }
+                    else if(environment != "Any" && filterAlignment.length == 1){
+                        for(var i = 0; i < filterAlignment[0].Environment.length; i++){
+                            if(filterAlignment[0].Environment[i] == environment){
+                                filterEnvironment.push(filterAlignment[0]);
+                            }
+                        }
+                    }
+                    else{
+                        filterEnvironment = filterAlignment;
+                    }
+                    console.log("by Environment: "+filterEnvironment.length);
+
+                    if(filterEnvironment.length != 0){
+                        var random = Math.floor((Math.random()*(filterEnvironment.length)));
+                        generated = filterEnvironment[random];
+                        genName = generated.Name;
+                        genCR = generated.Challenge;
+                        genXP = generated.XP;
+                        genPage = generated.Page;
+                        console.log("generated: " + genName + ", " + generated.Alignment + ", " + generated.Size + ", " + generated.Type + ", {" + generated.Environment + "}");
+                        document.getElementById("name").value = "Name: " + genName;
+                        document.getElementById("xp").value = "XP: " + genXP;
+                        document.getElementById("page").value = "Page: " + genPage;
+                        document.getElementById("CR").value = "CR: " + genCR;
+                        return generated;
+                    }
+                    else{
+                        alert('No such monster in database.');
+                    }
+                });
         }
     }
     function convertAlignment(){
@@ -301,6 +428,9 @@
         if(part1 == "Any" && part2 == "Any"){
             alignment = "Any";
         }
+        else if(part1 != "Any" && part2 == "Any"){
+            alignment = align1 + " Any";
+        }
         else if(part1 == "N" && part2 == "N"){
             alignment = "Unaligned";
         }
@@ -311,12 +441,4 @@
             alignment = part1 + part2;
         }
         console.log("ConvertAlignment: " + align1 + " + " + align2 + " = " + alignment);
-    }
-</script>
-
-<input type="text" id="name">
-<input type="text" id="xp">
-<input type="text" id="page">
-<input type="text" id="CR">
-</body>
-</html>
+    }>
