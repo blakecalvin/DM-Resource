@@ -1,0 +1,56 @@
+   document.getElementById('file').onchange = function() {
+
+        var file = this.files[0];
+        const monsterRef = firebase.database().ref().child('Monsters');
+        var reader = new FileReader();
+        reader.onload = function (progressEvent) {
+
+            // By lines
+            var lines = this.result.split('\n');
+            for (var line = 0; line < lines.length; line++) {
+                var id = monsterRef.child(line);
+                var filter = lines[line].split('=');
+                var name, image, size, monType, alignment, challenge, xp, page, environment;
+                for (var i = 0; i < filter.length; i++) {
+                    if (i == 0) { //name and image
+                        name = filter[i];
+                        image = name + ".jpeg";
+                    }
+                    if (i == 1) { //size
+                        size = filter[i];
+                    }
+                    if (i == 2) { //type
+                        monType = filter[i];
+                    }
+                    if (i == 3) { //alignment
+                        alignment = filter[i];
+                    }
+                    if (i == 4) { //Challenge Rating
+                        challenge = parseFloat(filter[i]);
+                    }
+                    if (i == 5) { //xp
+                        xp = filter[i];
+                    }
+                    if (i == 6) { //page #
+                        page = filter[i];
+                    }
+                    if (i == 7) {
+                        environment = filter[i].split(',');
+                    }
+                    console.log(filter[i]);
+                }
+                id.set({
+                    Name: name,
+                    Image: image,
+                    Size: size,
+                    Type: monType,
+                    Alignment: alignment,
+                    Challenge: challenge,
+                    XP: xp,
+                    Page: page,
+                    Environment: environment
+                });
+            }
+        };
+        reader.readAsText(file);
+    };

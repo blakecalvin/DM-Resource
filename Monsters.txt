@@ -1,0 +1,398 @@
+Frog=Tiny=Beast=Unaligned=0=0=322=Forest,Swamp
+Sea Horse=Tiny=Beast=Unaligned=0=0=337=Underwater
+Awakened Shrub=Small=Plant=Unaligned=0=10=317=Forest
+Baboon=Small=Beast=Unaligned=0=10=318=Forest,Hill
+Badger=Tiny=Beast=Unaligned=0=10=318=Forest
+Bat=Tiny=Beast=Unaligned=0=10=318=Forest,Underdark
+Cat=Tiny=Beast=Unaligned=0=10=320=Desert,Forest,Grassland,Urban
+Crab=Tiny=Beast=Unaligned=0=10=320=Coastal
+Crawling Claw=Tiny=Undead=NE=0=10=44=Underdark
+Deer=Medium=Beast=Unaligned=0=10=321=Forest,Grassland
+Eagle=Small=Beast=Unaligned=0=10=322=Coastal,Grassland,Hill,Mountain
+Giant Fire Beetle=Small=Beast=Unaligned=0=10=325=Underdark
+Goat=Medium=Beast=Unaligned=0=10=330=Grassland,Hill,Mountain,Urban
+Hawk=Tiny=Beast=Unaligned=0=10=330=Coastal,Grassland,Hill,Mountain
+Homunculus=Tiny=Construct=N=0=10=188=Urban
+Hyena=Medium=Beast=Unaligned=0=10=331=Desert,Forest,Grassland,Hill
+Jackal=Small=Beast=Unaligned=0=10=331=Desert,Grassland
+Lemure=Medium=Fiend=LE=0=10=76=Forest
+Lizard=Tiny=Beast=Unaligned=0=10=332=Coastal,Desert,Forest,Swamp,Underdark
+Myconid Sprout=Small=Plant=LN=0=10=230=Underdark
+Octopus=Small=Beast=Unaligned=0=10=333=Underwater
+Owl=Tiny=Beast=Unaligned=0=10=333=Arctic,Forest
+Quipper=Tiny=Beast=Unaligned=0=10=335=Underwater
+Rat=Tiny=Beast=Unaligned=0=10=335=Swamp,Urban
+Raven=Tiny=Beast=Unaligned=0=10=335=Hill,Swamp,Urban
+Scorpion=Tiny=Beast=Unaligned=0=10=337=Desert
+Shrieker=Medium=Plant=Unaligned=0=10=138=Underdark
+Spider=Tiny=Beast=Unaligned=0=10=337=Desert,Forest,Swamp,Underdark
+Vulture=Medium=Beast=Unaligned=0=10=339=Desert,Grassland,Hill
+Weasel=Tiny=Beast=Unaligned=0=10=340=Forest,Grassland,Hill
+Blood Hawk=Small=Beast=Unaligned=.125=25=319=Arctic,Coastal,Forest,Grassland,Hill,Mountain
+Camel=Large=Beast=Unaligned=.125=25=320=Desert
+Flumph=Small=Aberration=LG=.125=25=135=Underdark
+Flying Snake=Tiny=Beast=Unaligned=.125=25=322=Desert,Forest,Grassland,Urban
+Giant Crab=Medium=Beast=Unaligned=.125=25=324=Coastal
+Giant Rat=Small=Beast=Unaligned=.125=25=327=Forest,Swamp,Underdark,Urban
+Giant Weasel=Medium=Beast=Unaligned=.125=25=329=Forest,Grassland,Hill
+Kobold=Small=Humanoid=LE=.125=25=195=Arctic,Coastal,Desert,Hill,Mountain,Swamp,Underdark,Urban
+Mastiff=Medium=Beast=Unaligned=.125=25=332=Hill,Urban
+Merfolk=Medium=Humanoid=N=.125=25=218=Coastal,Underwater
+Mule=Medium=Beast=Unaligned=.125=25=333=Desert,Hill,Urban
+Poisonous Snake=Tiny=Beast=Unaligned=.125=25=334=Coastal,Desert,Grassland,Hill,Swamp
+Pony=Medium=Beast=Unaligned=.125=25=335=Urban
+Slaad Tadpole=Tiny=Aberration=CN=.125=25=276=Swamp
+Stirge=Tiny=Beast=Unaligned=.125=25=284=Coastal,Desert,Forest,Grassland,Hill,Mountain,Swamp,Underdark,Urban
+Twig Blight=Small=Plant=NE=.125=25=32=Forest
+Aarakocra=Medium=Humanoid=NG=.25=50=12=Mountain
+Axe Beak=Large=Beast=Unaligned=.25=50=317=Grassland,Hill
+Blink Dog=Medium=Fey=LG=.25=50=318=Forest
+Boar=Medium=Beast=Unaligned=.25=50=319=Forest,Grassland,Hill
+Bullywug=Medium=Humanoid=NE=.25=50=35=Swamp
+Constrictor Snake=Large=Beast=Unaligned=.25=50=320=Desert,Forest,Swamp,Underwater
+Draft Horse=Large=Beast=Unaligned=.25=50=321=Urban
+Dretch=Small=Fiend=CE=.25=50=57=Underdark
+Drow=Medium=Humanoid=NE=.25=50=128=Underdark
+Elk=Large=Beast=Unaligned=.25=50=322=Forest,Grassland,Hill
+Flying Sword=Small=Construct=Unaligned=.25=50=20=Urban
+Giant Badger=Medium=Beast=Unaligned=.25=50=323=Forest
+Giant Bat=Large=Beast=Unaligned=.25=50=323=Forest,Underdark
+Giant Centipede=Small=Beast=Unaligned=.25=50=323=Underdark,Urban
+Giant Frog=Medium=Beast=Unaligned=.25=50=325=Forest,Swamp
+Giant Lizard=Large=Beast=Unaligned=.25=50=326=Coastal,Desert,Forest,Swamp,Underdark
+Giant Owl=Large=Beast=N=.25=50=327=Arctic,Forest,Hill
+Giant Poisonous Snake=Medium=Beast=Unaligned=.25=50=327=Desert,Forest,Grassland,Swamp,Underdark,Urban
+Giant Wolf Spider=Medium=Beast=Unaligned=.25=50=330=Coastal,Desert,Forest,Grassland,Hill
+Goblin=Small=Humanoid=NE=.25=50=166=Forest,Grassland,Hill,Underdark
+Grimlock=Medium=Humanoid=NE=.25=50=175=Underdark
+Kenku=Medium=Humanoid=CN=.25=50=194=Forest,Urban
+Kuo-toa=Medium=Humanoid=NE=.25=50=199=Underdark
+Mud Mephit=Small=Elemental=NE=.25=50=216=Swamp
+Needle Blight=Medium=Plant=NE=.25=50=32=Forest
+Panther=Medium=Beast=Unaligned=.25=50=333=Forest,Grassland,Hill
+Pixie=Tiny=Fey=NG=.25=50=253=Forest
+Pseudodragon=Tiny=Dragon=NG=.25=50=254=Coastal,Desert,Forest,Hill,Mountain,Urban
+Pteranodon=Medium=Beast=Unaligned=.25=50=80=Coastal,Grassland,Mountain
+Riding Horse=Large=Beast=Unaligned=.25=50=336=Grassland,Urban
+Skeleton=Medium=Undead=LE=.25=50=272=Urban
+Smoke Mephit=Small=Elemental=NE=.25=50=217=Urban
+Sprite=Tiny=Fey=NG=.25=50=283=Forest
+Steam Mephit=Small=Elemental=NE=.25=50=217=Underwater
+Swarm of Bats=Medium=Beast=Unaligned=.25=50=337=Hill,Mountain,Underdark,Urban
+Swarm of Rats=Medium=Beast=Unaligned=.25=50=339=Swamp,Urban
+Swarm of Ravens=Medium=Beast=Unaligned=.25=50=339=Forest,Hill,Swamp,Urban
+Troglodyte=Medium=Humanoid=CE=.25=50=290=Underdark
+Violet Fungus=Medium=Plant=Unaligned=.25=50=138=Underdark
+Winged Kobold=Small=Humanoid=LE=.25=50=195=Arctic,Coastal,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Wolf=Medium=Beast=Unaligned=.25=50=341=Forest,Grassland,Hill
+Zombie=Medium=Undead=NE=.25=50=316=Urban
+Ape=Medium=Beast=Unaligned=.5=100=317=Forest
+Black Bear=Medium=Beast=Unaligned=.5=100=318=Forest
+Cockatrice=Small=Monstrosity=Unaligned=.5=100=42=Grassland
+Crocodile=Large=Beast=Unaligned=.5=100=320=Swamp,Urban
+Darkmantle=Small=Monstrosity=Unaligned=.5=100=46=Underdark
+Dust Mephit=Small=Elemental=NE=.5=100=215=Desert
+Gas Spore=Large=Plant=Unaligned=.5=100=138=Underdark
+Giant Goat=Large=Beast=Unaligned=.5=100=326=Grassland,Hill,Mountain
+Giant Sea Horse=Large=Beast=Unaligned=.5=100=328=Underwater
+Giant Wasp=Medium=Beast=Unaligned=.5=100=329=Forest,Grassland,Urban
+Gnoll=Medium=Humanoid=CE=.5=100=163=Desert,Forest,Grassland,Hill
+Gray Ooze=Medium=Ooze=Unaligned=.5=100=243=Underdark
+Hobgoblin=Medium=Humanoid=LE=.5=100=186=Desert,Forest,Grassland,Hill,Underdark
+Ice Mephit=Small=Elemental=NE=.5=100=215=Arctic
+Jackalwere=Medium=Humanoid=CE=.5=100=193=Desert,Grassland
+Lizardfolk=Medium=Humanoid=N=.5=100=204=Forest,Swamp
+Magma Mephit=Small=Elemental=NE=.5=100=216=Underdark
+Myconid Adult=Medium=Plant=LN=.5=100=232=Underdark
+Orc=Medium=Humanoid=CE=.5=100=246=Arctic,Forest,Grassland,Hill,Mountain,Swamp,Underdark
+Piercer=Medium=Monstrosity=Unaligned=.5=100=252=Underdark
+Reef Shark=Medium=Beast=Unaligned=.5=100=336=Underwater
+Rust Monster=Medium=Monstrosity=Unaligned=.5=100=262=Underdark
+Sahuagin=Medium=Humanoid=LE=.5=100=263=Coastal,Underwater
+Satyr=Medium=Fey=CN=.5=100=267=Forest
+Shadow=Medium=Undead=CE=.5=100=269=Underdark,Urban
+Swarm of Insects=Medium=Beast=Unaligned=.5=100=338=Desert,Forest,Grassland,Hill,Swamp,Underdark,Urban
+Vine Blight=Medium=Plant=NE=.5=100=32=Forest
+Warhorse=Large=Beast=Unaligned=.5=100=340=Urban
+Warhorse Skeleton=Large=Undead=LE=.5=100=273=Urban
+Worg=Large=Monstrosity=NE=.5=100=341=Forest,Grassland,Hill
+Animated Armor=Medium=Construct=Unaligned=1=200=19=Urban
+Brass Dragon Wyrmling=Medium=Dragon=CG=1=200=106=Desert
+Brown Bear=Large=Beast=Unaligned=1=200=319=Arctic,Forest,Hill
+Bugbear=Medium=Humanoid=CE=1=200=33=Forest,Grassland,Underdark
+Copper Dragon Wyrmling=Medium=Dragon=CG=1=200=112=Hill
+Dire Wolf=Large=Beast=Unaligned=1=200=321=Forest,Hill
+Dryad=Medium=Fey=N=1=200=121=Forest
+Duergar=Medium=Humanoid=LE=1=200=122=Underdark
+Fire Snake=Medium=Elemental=NE=1=200=265=Underdark
+Ghoul=Medium=Undead=CE=1=200=148=Swamp,Underdark,Urban
+Giant Eagle=Large=Beast=NG=1=200=324=Coastal,Grassland,Hill,Mountain
+Giant Hyena=Large=Beast=Unaligned=1=200=326=Desert,Forest,Grassland,Hill
+Giant Octopus=Large=Beast=Unaligned=1=200=326=Underwater
+Giant Spider=Large=Beast=Unaligned=1=200=328=Desert,Forest,Swamp,Underdark,Urban
+Giant Toad=Large=Beast=Unaligned=1=200=329=Coastal,Desert,Forest,Swamp,Underdark
+Giant Vulture=Large=Beast=NE=1=200=329=Desert,Grassland
+Goblin Boss=Small=Humanoid=NE=1=200=166=Forest,Grassland,Hill,Underdark
+Half-ogre=Large=Giant=Any chaotic=1=200=238=Arctic,Desert,Forest,Hill,Mountain,Underdark,Urban
+Harpy=Medium=Monstrosity=CE=1=200=181=Coastal,Forest,Hill,Mountain
+Hippogriff=Large=Monstrosity=Unaligned=1=200=184=Grassland,Hill,Mountain
+Imp=Tiny=Fiend=LE=1=200=76=Forest
+Kuo-toa Whip=Medium=Humanoid=NE=1=200=200=Underdark
+Lion=Large=Beast=Unaligned=1=200=331=Desert,Grassland,Hill,Mountain
+Quaggoth Spore Servant=Medium=Plant=Unaligned=1=200=30=Underdark
+Quasit=Tiny=Fiend=CE=1=200=63=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Scarecrow=Medium=Construct=CE=1=200=268=Grassland
+Specter=Medium=Undead=CE=1=200=279=Underdark,Urban
+Swarm of Quippers=Medium=Beast=Unaligned=1=200=338=Underwater
+Thri-kreen=Medium=Humanoid=CN=1=200=288=Desert,Grassland
+Tiger=Large=Beast=Unaligned=1=200=339=Forest,Grassland
+Young Faerie Dragon=Tiny=Dragon=CG=1=200=133=Forest
+Yuan-ti Pureblood=Medium=Humanoid=NE=1=200=310=Desert,Forest,Swamp,Urban
+Adult Faerie Dragon=Tiny=Dragon=CG=2=450=133=Forest
+Allosaurus=Large=Beast=Unaligned=2=450=79=Grassland
+Ankheg=Large=Monstrosity=Unaligned=2=450=21=Forest,Grassland
+Awakened Tree=Huge=Plant=Unaligned=2=450=317=Forest
+Black Dragon Wyrmling=Medium=Dragon=CE=2=450=88=Swamp
+Bronze Dragon Wyrmling=Medium=Dragon=LG=2=450=109=Coastal
+Carrion Crawler=Large=Monstrosity=Unaligned=2=450=37=Underdark
+Cave Bear=Large=Beast=Unaligned=2=450=mm=334=Underdark
+Centaur=Large=Monstrosity=NG=2=450=38=Forest,Grassland
+Ettercap=Medium=Monstrosity=NE=2=450=131=Forest
+Gargoyle=Medium=Elemental=CE=2=450=140=Underdark,Urban
+Gelatinous Cube=Large=Ooze=Unaligned=2=450=242=Underdark
+Ghast=Medium=Undead=CE=2=450=148=Swamp,Underdark,Urban
+Giant Boar=Large=Beast=Unaligned=2=450=323=Forest,Grassland,Hill
+Giant Constrictor Snake=Huge=Beast=Unaligned=2=450=324=Desert,Forest,Swamp,Underdark,Underwater
+Giant Elk=Huge=Beast=Unaligned=2=450=325=Forest,Grassland,Hill,Mountain
+Gibbering Mouther=Medium=Aberration=N=2=450=157=Underdark
+Gnoll Pack Lord=Medium=Humanoid=CE=2=450=163=Desert,Forest,Grassland,Hill
+Green Dragon Wyrmling=Medium=Dragon=LE=2=450=95=Forest
+Grick=Medium=Monstrosity=N=2=450=173=Forest,Underdark
+Griffon=Large=Monstrosity=Unaligned=2=450=174=Arctic,Coastal,Grassland,Hill,Mountain
+Hunter Shark=Large=Beast=Unaligned=2=450=330=Underwater
+Intellect Devourer=Tiny=Aberration=LE=2=450=191=Underdark
+Lizardfolk Shaman=Medium=Humanoid=N=2=450=205=Forest,Swamp
+Merrow=Large=Monstrosity=CE=2=450=219=Coastal,Underwater
+Mimic=Medium=Monstrosity=N=2=450=220=Underdark,Urban
+Minotaur Skeleton=Large=Undead=LE=2=450=273=Underdark
+Nothic=Medium=Aberration=NE=2=450=236=Underdark
+Ochre Jelly=Large=Ooze=Unaligned=2=450=243=Underdark
+Ogre=Large=Giant=CE=2=450=237=Arctic,Coastal,Desert,Forest,Grassland,Hill,Mountain,Swamp,Underdark
+Orc Eye of Gruumsh=Medium=Humanoid=CE=2=450=247=Arctic,Forest,Grassland,Hill,Mountain,Swamp,Underdark
+Orog=Medium=Humanoid=CE=2=450=247=Arctic,Forest,Grassland,Hill,Mountain,Underdark
+Pegasus=Large=Celestial=CG=2=450=250=Forest,Grassland,Hill
+Peryton=Medium=Monstrosity=CE=2=450=251=Hill,Mountain
+Plesiosaurus=Large=Beast=Unaligned=2=450=80=Coastal,Underwater
+Polar Bear=Large=Beast=Unaligned=2=450=334=Arctic,Underdark
+Quaggoth=Medium=Humanoid=CN=2=450=256=Underdark
+Rhinoceros=Large=Beast=Unaligned=2=450=336=Grassland
+Rug of Smothering=Large=Construct=Unaligned=2=450=20=Urban
+Saber-toothed Tiger=Large=Beast=Unaligned=2=450=336=Arctic,Mountain
+Sahuagin Priestess=Medium=Humanoid=LE=2=450=264=Coastal,Underwater
+Sea Hag=Medium=Fey=CE=2=450=179=Coastal,Underwater
+Silver Dragon Wyrmling=Medium=Dragon=LG=2=450=118=Mountain,Urban
+Spined Devil=Small=Fiend=LE=2=450=78=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Swarm of Poisonous Snakes=Medium=Beast=Unaligned=2=450=338=Forest,Swamp
+Wererat=Medium=Humanoid=LE=2=450=209=Forest,Urban
+White Dragon Wyrmling=Medium=Dragon=CE=2=450=102=Arctic
+Will-o-wisp=Tiny=Undead=CE=2=450=301=Forest,Swamp,Urban
+Ankylosaurus=Huge=Beast=Unaligned=3=700=79=Grassland
+Basilisk=Medium=Monstrosity=Unaligned=3=700=24=Mountain
+Blue Dragon Wyrmling=Medium=Dragon=LE=3=700=91=Coastal,Desert
+Bugbear Chief=Medium=Humanoid=CE=3=700=33=Forest,Grassland,Underdark
+Displacer Beast=Large=Monstrosity=LE=3=700=81=Forest
+Doppelganger=Medium=Monstrosity=N=3=700=82=Underdark,Urban
+Giant Scorpion=Large=Beast=Unaligned=3=700=327=Desert
+Gold Dragon Wyrmling=Medium=Dragon=LG=3=700=115=Forest,Grassland
+Green Hag=Medium=Fey=NE=3=700=177=Forest,Hill,Swamp
+Grell=Medium=Aberration=NE=3=700=172=Underdark
+Hell Hound=Medium=Fiend=LE=3=700=182=Mountain,Underdark
+Hobgoblin Captain=Medium=Humanoid=LE=3=700=186=Desert,Forest,Grassland,Hill,Underdark
+Hook Horror=Large=Monstrosity=N=3=700=189=Underdark
+Killer Whale=Huge=Beast=Unaligned=3=700=331=Underwater
+Manticore=Large=Monstrosity=LE=3=700=213=Arctic,Coastal,Grassland,Hill,Mountain
+Minotaur=Large=Monstrosity=CE=3=700=223=Underdark
+Mummy=Medium=Undead=LE=3=700=228=Desert
+Nightmare=Large=Fiend=NE=3=700=235=Underdark
+Owlbear=Large=Monstrosity=Unaligned=3=700=249=Forest
+Phase Spider=Large=Monstrosity=Unaligned=3=700=334=Desert,Forest,Grassland,Hill,Underdark,Urban
+Quaggoth Thonot=Medium=Humanoid=CN=3=700=256=Underdark
+Spectator=Medium=Aberration=LN=3=700=30=Underdark
+Water Weird=Large=Elemental=N=3=700=299=Underdark,Urban
+Werewolf=Medium=Humanoid=CE=3=700=211=Forest,Hill
+Wight=Medium=Undead=NE=3=700=300=Desert,Swamp,Underdark,Urban
+Winter Wolf=Large=Monstrosity=NE=3=700=340=Arctic
+Yeti=Large=Monstrosity=CE=3=700=305=Arctic
+Yuan-ti Malison=Medium=Monstrosity=NE=3=700=309=Desert,Forest,Swamp
+Banshee=Medium=Undead=CE=4=1100=23=Coastal,Forest
+Black Pudding=Large=Ooze=Unaligned=4=1100=241=Underdark
+Bone Naga=Large=Undead=LE=4=1100=233=Underdark
+Chuul=Large=Aberration=CE=4=1100=40=Underdark
+Couatl=Medium=Celestial=LG=4=1100=43=Desert,Forest,Grassland,Urban
+Elephant=Huge=Beast=Unaligned=4=1100=322=Grassland
+Ettin=Large=Giant=CE=4=1100=132=Hill,Mountain,Underdark
+Flameskull=Tiny=Undead=NE=4=1100=134=Underdark
+Ghost=Medium=Undead=Any=4=1100=147=Underdark,Urban
+Gnoll Fang of Yeenoghu=Medium=Fiend=CE=4=1100=163=Desert,Forest,Grassland,Hill
+Helmed Horror=Medium=Construct=N=4=1100=183=Urban
+Incubus=Medium=Fiend=NE=4=1100=285=Urban
+Lamia=Large=Monstrosity=CE=4=1100=201=Desert
+Lizard King/Queen=Medium=Humanoid=CE=4=1100=205=Forest,Swamp
+Orc War Chief=Medium=Humanoid=CE=4=1100=246=Arctic,Forest,Grassland,Hill,Mountain,Swamp,Underdark
+Red Dragon Wyrmling=Medium=Dragon=CE=4=1100=98=Hill,Mountain
+Shadow Demon=Medium=Fiend=CE=4=1100=64=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Succubus=Medium=Fiend=NE=4=1100=285=Urban
+Wereboar=Medium=Humanoid=NE=4=1100=209=Forest,Grassland,Hill
+Weretiger=Medium=Humanoid=N=4=1100=210=Desert,Forest,Grassland
+Air Elemental=Large=Elemental=N=5=1800=124=Desert,Mountain
+Barbed Devil=Medium=Fiend=LE=5=1800=70=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Barlgura=Large=Fiend=CE=5=1800=56=Forest
+Beholder Zombie=Large=Undead=NE=5=1800=316=Underdark
+Bulette=Large=Monstrosity=Unaligned=5=1800=34=Grassland,Hill,Mountain
+Cambion=Medium=Fiend=Any evil=5=1800=36=Urban
+Drow Elite Warrior=Medium=Humanoid=NE=5=1800=128=Underdark
+Earth Elemental=Large=Elemental=N=5=1800=124=Underdark
+Fire Elemental=Large=Elemental=N=5=1800=125=Desert
+Flesh Golem=Medium=Construct=N=5=1800=169=Underdark
+Giant Crocodile=Huge=Beast=Unaligned=5=1800=324=Swamp
+Giant Shark=Huge=Beast=Unaligned=5=1800=328=Underwater
+Gorgon=Large=Monstrosity=Unaligned=5=1800=171=Forest,Grassland,Hill
+Hill Giant=Huge=Giant=CE=5=1800=155=Hill
+Mezzoloth=Medium=Fiend=NE=5=1800=313=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Night Hag=Medium=Fiend=NE=5=1800=178=Underdark
+Otyugh=Large=Aberration=N=5=1800=248=Underdark
+Red Slaad=Large=Aberration=CN=5=1800=276=Underdark
+Revenant=Medium=Undead=N=5=1800=259=Arctic,Desert,Forest,Hill,Swamp,Urban
+Roper=Large=Monstrosity=NE=5=1800=261=Underdark
+Sahuagin Baron=Large=Humanoid=LE=5=1800=264=Coastal,Underwater
+Salamander=Large=Elemental=NE=5=1800=266=Underdark
+Shambling Mound=Large=Plant=Unaligned=5=1800=270=Forest,Swamp
+Triceratops=Huge=Beast=Unaligned=5=1800=80=Grassland
+Troll=Large=Giant=CE=5=1800=291=Arctic,Forest,Hill,Mountain,Swamp,Underdark
+Umber Hulk=Large=Monstrosity=CE=5=1800=292=Underdark
+Unicorn=Large=Celestial=LG=5=1800=294=Forest
+Vampire Spawn=Medium=Undead=NE=5=1800=mm=298=Underdark,Urban
+Water Elemental=Large=Elemental=N=5=1800=125=Coastal,Swamp,Underwater
+Werebear=Medium=Humanoid=NG=5=1800=208=Arctic,Forest,Hill
+Wraith=Medium=Undead=NE=5=1800=302=Underdark
+Xorn=Medium=Elemental=N=5=1800=304=Underdark
+Young Remorhaz=Large=Monstrosity=Unaligned=5=1800=258=Arctic
+Chasme=Large=Fiend=CE=6=2300=57=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Chimera=Large=Monstrosity=CE=6=2300=39=Grassland,Hill,Mountain,Underdark
+Cyclops=Huge=Giant=CN=6=2300=45=Coastal,Desert,Grassland,Hill,Mountain,Underdark
+Drider=Large=Monstrosity=CE=6=2300=120=Underdark
+Galeb Duhr=Medium=Elemental=N=6=2300=139=Hill,Mountain
+Hobgoblin Warlord=Medium=Humanoid=LE=6=2300=187=Desert,Forest,Grassland,Hill,Underdark
+Invisible Stalker=Medium=Elemental=N=6=2300=192=Urban
+Kuo-toa Archpriest=Medium=Humanoid=NE=6=2300=200=Underdark
+Mammoth=Huge=Beast=Unaligned=6=2300=332=Arctic
+Medusa=Medium=Monstrosity=LE=6=2300=214=Desert
+Vrock=Large=Fiend=CE=6=2300=64=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Wyvern=Large=Dragon=Unaligned=6=2300=303=Hill,Mountain
+Young Brass Dragon=Large=Dragon=CG=6=2300=105=Desert
+Young White Dragon=Large=Dragon=CE=6=2300=101=Arctic
+Blue Slaad=Large=Aberration=CN=7=2900=276=Underdark
+Drow Mage=Medium=Humanoid=NE=7=2900=129=Underdark
+Giant Ape=Huge=Beast=Unaligned=7=2900=323=Forest
+Grick Alpha=Large=Monstrosity=N=7=2900=173=Forest,Underdark
+Mind Flayer=Medium=Aberration=LE=7=2900=222=Underdark
+Oni=Large=Giant=LE=7=2900=239=Forest,Urban
+Shield Guardian=Large=Construct=Unaligned=7=2900=271=Urban
+Stone Giant=Huge=Giant=N=7=2900=156=Hill,Mountain,Underdark
+Young Black Dragon=Large=Dragon=CE=7=2900=88=Swamp
+Young Copper Dragon=Large=Dragon=CG=7=2900=111=Hill
+Yuan-ti Abomination=Large=Monstrosity=NE=7=2900=308=Desert,Forest,Swamp
+Chain Devil=Medium=Fiend=LE=8=3900=72=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Cloaker=Large=Aberration=CN=8=3900=41=Underdark
+Fomorian=Huge=Giant=CE=8=3900=136=Underdark
+Frost Giant=Huge=Giant=NE=8=3900=155=Arctic,Mountain
+Green Slaad=Large=Aberration=CN=8=3900=277=Underdark
+Hezrou=Large=Fiend=CE=8=3900=60=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Hydra=Huge=Monstrosity=Unaligned=8=3900=190=Swamp
+Mind Flayer Arcanist=Medium=Aberration=LE=8=3900=222=Underdark
+Spirit Naga=Large=Monstrosity=CE=8=3900=234=Underdark
+Tyrannosaurus Rex=Huge=Beast=Unaligned=8=3900=80=Grassland
+Young Bronze Dragon=Large=Dragon=LG=8=3900=108=Coastal
+Young Green Dragon=Large=Dragon=LE=8=3900=94=Forest
+Abominable Yeti=Huge=Monstrosity=CE=9=5000=306=Arctic
+Bone Devil=Large=Fiend=LE=9=5000=71=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Clay Golem=Large=Construct=Unaligned=9=5000=168=Urban
+Cloud Giant=Huge=Giant=NE=9=5000=154=Mountain
+Fire Giant=Huge=Giant=LE=9=5000=154=Mountain,Underdark
+Glabrezu=Large=Fiend=CE=9=5000=58=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Gray Slaad=Medium=Aberration=CN=9=5000=277=Urban
+Nycaloth=Large=Fiend=NE=9=5000=314=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Treant=Huge=Plant=CG=9=5000=289=Forest
+Young Blue Dragon=Large=Dragon=LE=9=5000=91=Coastal,Desert
+Young Silver Dragon=Large=Dragon=LG=9=5000=118=Mountain,Urban
+Aboleth=Large=Aberration=LE=10=5900=13=Underdark
+Death Slaad=Medium=Aberration=CE=10=5900=278=Underdark
+Guardian Naga=Large=Monstrosity=LG=10=5900=234=Desert,Forest
+Stone Golem=Large=Construct=Unaligned=10=5900=170=Mountain,Urban
+Yochlol=Medium=Fiend=CE=10=5900=65=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Young Gold Dragon=Large=Dragon=LG=10=5900=115=Forest,Grassland
+Young Red Dragon=Large=Dragon=CE=10=5900=98=Hill,Mountain
+Behir=Huge=Monstrosity=NE=11=7200=25=Underdark
+Dao=Large=Elemental=NE=11=7200=143=Underdark
+Djinni=Large=Elemental=CG=11=7200=144=Coastal
+Efreeti=Large=Elemental=LE=11=7200=145=Desert
+Gynosphinx=Large=Monstrosity=LN=11=7200=282=Desert
+Horned Devil=Large=Fiend=LE=11=7200=74=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Marid=Large=Elemental=CN=11=7200=146=Coastal,Underwater
+Remorhaz=Huge=Monstrosity=Unaligned=11=7200=258=Arctic
+Roc=Gargantuan=Monstrosity=Unaligned=11=7200=260=Arctic,Coastal,Desert,Hill,Mountain
+Arcanaloth=Medium=Fiend=NE=12=8400=313=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Erinyes=Medium=Fiend=LE=12=8400=73=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Adult Brass Dragon=Huge=Dragon=CG=13=10000=105=Desert
+Adult White Dragon=Huge=Dragon=CE=13=10000=101=Arctic
+Beholder=Large=Aberration=LE=13=10000=28=Underdark
+Nalfeshnee=Large=Fiend=CE=13=10000=62=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Rakshasa=Medium=Fiend=LE=13=10000=257=Urban
+Storm Giant=Huge=Giant=CG=13=10000=156=Coastal,Underwater
+Ultroloth=Medium=Fiend=NE=13=10000=314=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Vampire=Medium=Undead=LE=13=10000=297=Urban
+Young Red Shadow Dragon=Large=Dragon=CE=13=10000=85=Underdark
+Adult Black Dragon=Huge=Dragon=CE=14=11500=88=Swamp
+Adult Copper Dragon=Huge=Dragon=CG=14=11500=111=Hill
+Beholder=Large=Aberration=LE=14=11500=28=Underdark
+Death Tyrant=Large=Undead=LE=14=11500=29=Underdark
+Ice Devil=Large=Fiend=LE=14=11500=75=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Adult Bronze Dragon=Huge=Dragon=LG=15=13000=108=Coastal
+Adult Green Dragon=Huge=Dragon=LE=15=13000=94=Forest
+Death Tyrant=Large=Undead=LE=15=13000=29=Underdark
+Mummy Lord=Medium=Undead=LE=15=13000=229=Desert
+Purple Worm=Gargantuan=Monstrosity=Unaligned=15=13000=255=Desert,Underdark
+Vampire=Medium=Undead=LE=15=13000=297=Urban
+Adult Blue Dragon=Huge=Dragon=LE=16=15000=91=Coastal,Desert
+Adult Silver Dragon=Huge=Dragon=LG=16=15000=117=Mountain,Urban
+Iron Golem=Large=Construct=Unaligned=16=15000=170=Urban,Underdark
+Marilith=Large=Fiend=CE=16=15000=61=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Mummy Lord=Medium=Undead=LE=16=15000=229=Desert
+Adult Blue Dracolich=Huge=Undead=LE=17=18000=84=Desert
+Adult Gold Dragon=Huge=Dragon=LG=17=18000=114=Forest,Grassland
+Adult Red Dragon=Huge=Dragon=CE=17=18000=98=Hill,Mountain
+Androsphinx=Large=Monstrosity=LN=17=18000=281=Desert
+Death Knight=Medium=Undead=CE=17=18000=47=Underdark
+Dragon Turtle=Gargantuan=Dragon=N=17=18000=119=Coastal,Underwater
+Goristro=Huge=Fiend=CE=17=18000=59=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Demilich=Tiny=Undead=NE=18=20000=48=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Balor=Huge=Fiend=CE=19=22000=55=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Demilich=Tiny=Undead=NE=20=24500=48=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Ancient Brass Dragon=Gargantuan=Dragon=CG=20=25000=104=Desert
+Ancient White Dragon=Gargantuan=Dragon=CE=20=25000=100=Arctic
+Pit Fiend=Large=Fiend=LE=20=25000=77=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Ancient Black Dragon=Gargantuan=Dragon=CE=21=33000=87=Swamp
+Ancient Copper Dragon=Gargantuan=Dragon=CG=21=33000=110=Hill
+Lich=Medium=Undead=Any evil=21=33000=202=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Ancient Bronze Dragon=Gargantuan=Dragon=LG=22=41000=107=Coastal
+Ancient Green Dragon=Gargantuan=Dragon=LE=22=41000=93=Forest
+Lich=Medium=Undead=Any evil=22=41000=202=Arctic,Desert,Forest,Hill,Mountain,Swamp,Underdark,Urban
+Ancient Blue Dragon=Gargantuan=Dragon=LE=23=50000=90=Coastal,Desert
+Ancient Silver Dragon=Gargantuan=Dragon=LG=23=50000=116=Mountain,Urban
+Kraken=Gargantuan=Monstrosity=CE=23=50000=197=Underwater
+Ancient Gold Dragon=Gargantuan=Dragon=LG=24=62000=113=Forest,Grassland
+Ancient Red Dragon=Gargantuan=Dragon=CE=24=62000=97=Hill,Mountain
+Tarrasque=Gargantuan=Monstrosity=Unaligned=30=155000=286=Urban
+Solar=Large=Celestial=LG=21=33000=18=Arctic,Desert,Forest,Hill,Mountain,Urban
+Empyrean=Huge=Celestial=NE=23=50000=130=Arctic,Desert,Forest,Hill,Mountain,Urban
+Planetar=Large=Celestial=LG=16=15000=17=Arctic,Desert,Forest,Hill,Mountain,Urban
