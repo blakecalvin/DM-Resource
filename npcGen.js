@@ -29,22 +29,22 @@ function charGen(r, c, g, b)
     //calls function that randomly generates a name
     charName = nameGen();
     //if race has not been designated, call function that generates one randomly, otherwise use designated class
-    if(r = "null")
+    if(r = "Any")
         race = raceGen();
     else
         race = r;
     //if class has not been designated, call function that generates one randomly, otherwise use designated class
-    if(c = "null")
+    if(c = "Any")
         charClass = classGen();
     else
         charClass = c;
     //if gender has not been designated, call function that generates one randomly, otherwise use designated gender
-    if(g = "null")
+    if(g = "Any")
         gender = genderGen();
     else
         gender = g;
     //if background has not been designated, call function that generates one randomly, otherwise use designated background
-    if(b = "null")
+    if(b = "Any")
         bGround = backgroundGen();
     else
         bGround = b;
@@ -281,9 +281,9 @@ function genderGen()
 }
 function backgroundGen()
 {
-    var d13 = rng(1, 13)
+    var d17 = rng(1, 17)
     var charBground;
-    switch(d13)
+    switch(d17)
     {
         case 1: charBground = "Acolyte";
             break;
@@ -310,6 +310,14 @@ function backgroundGen()
         case 12: charBground = "Soldier";
             break;
         case 13: charBground = "Urchin";
+            break;
+        case 14: charBground = "Far traveler";
+            break;
+        case 15: charBground = "Artisan";
+            break;
+        case 16: charBground = "Commonder";
+            break;
+        case 17: charBground = "Bounty Hunter";
             break;
         default: charBground = "Null";
     }
