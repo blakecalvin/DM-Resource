@@ -1,0 +1,8 @@
+    var output = '<p class = "genOutput">'
+        + '<table>'
+        + '<tr><td>Name: </td><td>'+genName+'</td></tr>'
+        + '<tr><td>Challenge Rating: </td><td>'+genCR+'</td></tr>'
+        + '<tr><td>XP: </td><td>'+genXP+'</td></tr>'
+        + '<tr><td>Page #: </td><td>'+genPage+'</td></tr></table></p>';
+    document.getElementById("main").innerHTML ='<h3 class = "outputHeader">Encounter Generated </h3>' + output;
+    document.getElementById("encounterCanvas").innerHTML = document.getElementById("main").innerHTML;
