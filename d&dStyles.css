@@ -1,0 +1,238 @@
+div.tab{
+	overflow: hidden;
+	background: -webkit-linear-gradient(top, #604020 0%, #4d3319 80%);
+	background: -ms-linear-gradient(top, #604020 20%, #4d3319 80%);
+	border-top-style: solid;
+	border-color:  #4d3319;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-width: 1px;
+}
+
+div.tab button{
+	background: -webkit-linear-gradient(top, #604020 20%, #4d3319 80%);
+	background: -ms-linear-gradient(top, #604020 20%, #4d3319 80%);
+	float: left;
+	cursor: pointer;
+	padding-top: 14px;
+	padding-bottom:14px;
+	padding-right: 14px;
+	padding-left:14px;
+	transition: 0.3s;
+	font-size: 0.85em;
+	color: white;
+	font-weight: bold;
+	border-color:  #4d3319;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid ;
+}
+.homeTabStyle{
+	width:220px;
+	padding-left: 28px;
+	padding-right: 28px;
+}
+div.tab button:hover{
+   background-color: #a3c2c2;
+}
+
+div.tab button.active{
+   background-color: #f384b68;
+}
+button:focus {
+	outline:0;
+}
+.sidenav{
+	min-height: 100%;
+	width:200px;
+	color: black;
+	position: absolute;
+	z-index: 1;
+	background: -webkit-linear-gradient(right, #a6a6a6 20%, #cccccc 80%);
+	background: -ms-linear-gradient(right, #a6a6a6 20%, #cccccc 80%); 				
+	overflow-x: hidden;
+	padding-left: 1em;
+	padding-top: 1em;
+	font-size: 20px;
+}
+img {
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+h1 {
+    text-align: left;
+}
+h2 {
+    text-align: center;
+}
+.sidenav a{
+   text-decoration: none;
+   color:black;
+   display:block;
+}
+
+.title{
+	background:-webkit-linear-gradient(top, #700113 0%, #54010f 100%);
+	background:-ms-linear-gradient(top, #700113 0%, #54010f 100%);
+
+	color:white; 
+	padding-left:30px;
+	padding-top:1px;
+	padding-bottom:1px;
+	font-family: "Palatino Linotype";
+	!text-shadow: 2px 2px #2d2d2c;
+}
+body{
+	background-color:black; 
+	color:white; 
+	font-family: "Arial";
+	margin: 0px;
+	height: 100%;
+}
+img {
+	display: block;
+	margin: auto;
+	width: 40%;
+}
+article {
+	margin-left: 200px;
+	width: auto;
+	height: 100%;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	padding-right:3em;
+	padding-left:3em;
+	overflow: hidden;
+}
+.links {
+	font-size: 15px;
+	padding-left: 1em;
+	padding-top: 0.5em;
+	margin: 0px;
+}
+input{
+	font-size:15px;
+	margin:0px;
+	width:160px;
+}
+select{
+	font-size:15px;
+	margin-top:3px;
+	margin-bottom:5px;
+	margin-left:15px;
+	width:160px;
+	height:25px;
+}
+.category {
+	font-size:0.8em;
+	padding-left: 0em;
+	padding-top: 0.5em;
+	margin: 0px;
+}
+nav a:hover{
+   background-color: #a3c2c2;
+}
+hr {
+	border-top: 1px solid #8c8b8b;
+	border-bottom: 1px solid #fff;
+}
+.container{
+	font-size:1em;
+	background-color:black;
+}
+.imageContainer{
+	float:left;
+	width : 40%;
+}
+.subContainer{
+	float:right;
+	font-size:1em;
+	background-color:black;
+	width : 60%;
+}
+.genButton{
+	position:absolute;
+	margin-left:3em;
+	font-size: 0.8em;
+	padding-top: 0.5em;
+	padding-bottom:0.5em;
+}
+.clearButton{
+	position: absolute;
+	right: 23px;
+	font-size: 0.7em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+.hiddenCanvas{
+	display: none;
+}
+p{
+	padding-left: 2em;
+}
+.genOutput{
+	padding-left: 4em;
+}
+.outputHeader{
+	padding-left: 2em;
+}
+.instruct{
+	text-align: left;
+	font-size: 1.5em;
+}
+.welcome{
+	font-size: 1.2em;
+	line-height:150%;
+}
+#encounter_pic{
+	
+	width: 90%;
+	max-width: 600px;
+	box-shadow: 3px 3px 3px #aaa;
+}
+#treasure_pic{
+	width: 90%;
+	max-width: 600px;
+	box-shadow: 3px 3px 3px #aaa;
+}
+#NPC_pic{
+	width: 90%;
+	max-width: 600px;
+	box-shadow: 3px 3px 3px #aaa;
+	}
+table, th, td {
+	
+	border-collapse:collapse;
+    border: 2px solid #4d3319;
+    padding: 3px 3px 3px 3px;
+	margin-left: 3.5em;
+	padding: 7px;
+}
+table.npcTable{
+	min-width:350px;
+	max-width:500px;
+	width:60%;
+}
+table.treasureTable{
+	min-width:530px;
+	max-width:600px;
+	width:40%;
+}
+
+
+th{
+	width:20%;
+	background-color: #604020;
+}
+td{
+	width:80%;
+	background-color: #d3d3d3;
+	color:black;
+	min-width:100px;
+}
+cite{
+	font-size:1em;
+}

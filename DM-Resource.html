@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Dungeon Master Resources </title>
+		<link rel="stylesheet" type="text/css" href="resources/d&dStyles.css">
+		<meta charset="UTF-8">
+    </head>
+	<body onLoad="open_HomePage()" onresize = "resizeSideBar()" id= "docSpace">
+		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyAlafaWfjv-Z-rkyBPVo1K3jyg_s9i0TKY",
+				authDomain: "dm-database.firebaseapp.com",
+				databaseURL: "https://dm-database.firebaseio.com",
+				projectId: "dm-database",
+				storageBucket: "dm-database.appspot.com",
+				messagingSenderId: "1041442142048"
+			};
+		    firebase.initializeApp(config);
+		</script>
+		<script src = "resources/d&dScripts.js"></script>
+		<div class = "title" id = "docTitle">
+			<h1>DUNGEONS AND DRAGONS RESOURCES</h1>
+		</div>
+		
+		<div class="tab" id = "navTabs">
+			<button id = "homeTab" class="tablinks, homeTabStyle" onclick="open_HomePage()"> Home </button>
+			<button id="encounterTab" onclick="openEncounterBar()"> Encounters </button>
+			<button id="npcTab"  onclick="open_NPC_Bar()"> Non-Playable Characters </button>
+			<button id="treasureTab" onclick="openLootBar()"> Treasure </button>
+		</div>
+	<nav>
+		<div id="helpBar" class="sidenav">
+				<h4 class = "category">Links</h4>
+				<a class = "links" href="http://dnd.wizards.com/" target="_blank">Official Website</a>
+				<a class = "links" href="http://dungeons.wikia.com/wiki/Main_Page" target="_blank">D&D Wiki</a>
+				<hr>
+				<h4 class = "category">Resources </h4>
+				<a class = "links" href="https://www.amazon.com/Monster-Manual-Core-Rulebook-Wizards/dp/0786965614" target="_blank">Buy Monster Manual</a>
+				<a class = "links" href="https://www.amazon.com/Dungeon-Masters-Guide-Core-Rulebook/dp/0786965622" target="_blank">Buy DM Guide</a>
+				<hr>
+				<h4 class = "category"> Support </h4>
+				<a class = "links" href="http://wizards.custhelp.com/app/answers/detail/a_id/2303" target="_blank">Help</a>
+		</div>
+	
+		<div id="encounterBar" class="sidenav">
+		    <button class="clearButton" onClick ="clear_EncounterValues()" > Reset </button>
+			<h4 class = "category"> Party </h4>
+			<h4 class = "links"> Size </h4>
+			<form class = "links">
+				<input id = "partySize" type = "number">
+			</form>
+				<h4 class = "links"> Level </h4>
+			<form class = "links">
+				<input id = "partyLevel" type = "numer">
+			</form>
+			<hr>
+			<h4 class = "category"> Monster </h4>
+			<h4 class = "links"> Difficulty </h4>
+			<select id = "monsterDiff">
+				<option value="Any"> Any </option>
+			   <option value="Easy"> Easy </option>
+			   <option value="Medium"> Medium </option>
+			   <option value="Difficult"> Difficult </option>
+			   <option value="Deadly"> Deadly </option>
+			</select>
+			<h4 class = "links"> Alignment </h4>
+			<select id = "monsterAlignOne">
+			   <option value="Any"> Any </option>
+			   <option value="Lawful"> Lawful </option>
+			   <option value="Neutral"> Neutral </option>
+			   <Option value="Chaotic"> Chaotic </Option>
+			</select>
+			<select id = "monsterAlignTwo">
+			   <option value="Any"> Any </option>
+			   <option value="Good"> Good </option>
+			   <option value="Neutral"> Neutral </option>
+			   <option value="Evil"> Evil </option>
+			</select>	
+			<h4 class = "links"> Size </h4>
+			<select id = "monsterSize">
+			   <option value="Any"> Any Size </option>
+			   <option value="Tiny"> Tiny </option>
+			   <option value="Small"> Small </option>
+			   <option value="Medium"> Medium </option>
+			   <option value="Large"> Large </option>
+			   <option value="Huge"> Huge </option>
+			   <option value="Gargantuan"> Gargantuan </option>
+			</select>
+			<h4 class = "links"> Type </h4>
+			<select id = "monsterType">
+			   <option value="Any"> Any Type </option>
+			   <option value="Aberation"> Aberration </option>
+			   <option value="Beast"> Beast </option>
+			   <option value="Celestial"> Celestial </option>
+			   <option value="Construct"> Construct </option>
+			   <option value="Dragon"> Dragon </option>
+			   <option value="Elemental"> Elemental </option>
+			   <option value="Fey"> Fey </option>
+			   <option value="Fiend"> Fiend </option>
+			   <option value="Giant"> Giant </option>
+			   <option value="Humanoid"> Humanoid </option>
+			   <option value="Ooze"> Ooze </option>
+			   <option value="Plant"> Plant </option>
+			   <option value="Undead"> Undead </option>
+			</select>
+			<h4 class = "links"> Environment </h4>
+			<select id = "monsterEnvi">
+			   <option value="Any"> Any Environment </option>
+			   <option value="Arctic"> Arctic </option>
+			   <option value="Coastal"> Coastal </option>
+			   <option value="Desert"> Desert </option>
+			   <option value="Forest"> Forest </option>
+			   <option value="Grassland"> Grassland </option>
+			   <option value="Hill"> Hill </option>
+			   <option value="Mountain"> Mountain </option>
+			   <option value="Swamp"> Swamp </option>
+			   <option value="Underdark"> Underdark </option>
+			   <option value="Underwater"> Underwater </option>
+			   <option value="Urban"> Urban </option>        
+			</select>
+			<hr>
+			<button class="genButton" onClick ="get_EncounterValues()" > Generate </button>
+		</div>
+		<div id="lootBar" class="sidenav">
+			<h4 class = "category">Treasure</h4>
+			<h4 class = "links">Challege Rating (CR)</h4>
+			<form class = "links">
+				<input id = "challenge_rating" type="number" min = "1" max = "30">
+			</form>
+			<hr>
+			<button class="genButton" onClick ="get_TreasureCR()" > Generate </button>
+		</div>
+		<div id="NPC_Bar" class="sidenav">
+		    <button class="clearButton" onClick ="clear_NPCValues()" > Reset </button>
+			<h4 class = "category">Properties </h4>
+			<h4 class = "links">Race </h4>
+			<select id = "npc_Race">
+				<option value="Any"> Any </option>
+				<option value="Dragonborn"> Dragonborn </option>
+				<option value="Dwarf"> Dwarf </option>
+				<option value="Eladrin"> Eladrin </option>
+				<option value="Elf"> Elf </option>
+				<option value="Gnome"> Gnome </option>
+				<option value="Half-Elf"> Half-Elf </option>
+				<option value="Half-Orc"> Half-Orc </option>
+				<option value="Halfling"> Halfling </option>
+				<option value="Human"> Human </option>
+				<option value="Tiefling"> Tiefling </option>
+			</select>
+			<h4 class = "links">Class </h4>
+			<select id = "npc_Class">
+				<option value="Any"> Any </option>
+				<option value="Barbarian"> Barbarian </option>
+				<option value="Bard"> Bard </option>
+				<option value="Cleric"> Cleric </option>
+				<option value="Druid"> Druid </option>
+				<option value="Fighter"> Fighter </option>
+				<option value="Mage"> Mage </option>
+				<option value="Monk"> Monk </option>
+				<option value="Paladin"> Paladin </option>
+				<option value="Ranger"> Ranger </option>
+				<option value="Sorcerer"> Sorcerer </option>
+				<option value="Rogue"> Rogue </option>
+				<option value="Warlock"> Warlock </option>
+			</select>
+			<h4 class = "links">Background </h4>
+			<select id= "npc_Background">
+				<option value="Any"> Any </option>
+				<option value="Acolyte"> Acolyte </option>
+				<option value="Artisan"> Artisan </option>
+				<option value="Bounty Hunter"> Bounty Hunter </option>
+				<option value="Charlatan"> Charlatan </option>
+				<option value="Commoner"> Commoner </option>
+				<option value="Criminal"> Criminal </option>
+				<option value="Entertainer"> Entertainer </option>
+				<option value="Far Traveler"> Far Traveler </option>
+				<option value="Folk Hero"> Folk Hero </option>
+				<option value="Guild Artisan"> Guild Artisan </option>
+				<option value="Hermit"> Hermit </option>
+				<option value="Noble"> Noble </option>
+				<option value="Outlander"> Outlander </option>
+				<option value="Sage"> Sage </option>
+				<option value="Sailor"> Sailor </option>
+				<option value="Soldier"> Soldier </option>
+				<option value="Urchin"> Urchin </option>
+			</select>
+			<h4 class = "links">Gender </h4>
+			<select id = "npc_Gender">
+				<option value="Any"> Any </option>
+				<option value="Male"> Male </option>
+				<option value="Female"> Female </option>
+			</select>
+			<hr>
+			<button class="genButton" onClick ="get_NPCValues()" > Generate </button>
+		</div>
+	</nav>
+	<article id ="artic">
+		<div class="container" id ="main">
+		</div>
+		<div class="container hiddenCanvas" id ="encounterCanvas">
+			<div class = "imageContainer">
+				<img src="resources/encounter_test.jpg" id="encounter_pic">
+			</div>
+			<div class = "subContainer">
+				<p class="welcome">A monster is defined as any creature that can be interacted with and potentially fought and killed. Even something as harmless as a frog or as benevolent as a unicorn is a monster by this definition. The term also applies to humans, elves, dwarves, and other civilized folk who might be friends or rivals to the player characters. Most of the monsters that haunt the D&D world, however, are threats that are meant to be stopped: rampaging demons, conniving devils, soul-sucking undead, summoned elementals-the list goes on.<br><cite align="right">D&D Monster Manual 5ed. pp.4</cite> 
+				</p>
+				<br>
+				<p class="welcome"><b>Instructions</b></p>
+				<p class="welcome"><b>Party Size: </b></p> 
+				<p class="welcome"> Simply enter the number of people in the party </p>
+				<p class="welcome"><b>Party Level: </b></p> 
+				<p class="welcome"> Your party's level should be between 1-20. </p>
+				<p class="welcome"><b>Monster Specifications: </b></p> 
+				<p class="welcome"> How much of a challenge should your players get? </p>
+				<p class="welcome"> What alignment conflicts with your players? </p>
+				<p class="welcome"> Where are your players getting attacked? </p>
+				<p class="welcome"> Please use the drop down lists to choose characteristics </p>
+				
+			</div>
+		</div>
+		<div class="container hiddenCanvas" id ="npcCanvas">
+			<div class = "imageContainer">
+				<img src="resources/NPC_test.jpg" id="NPC_pic"></img>
+			</div>
+			<div class = "subContainer">
+				<p class="welcome">A NONPLAYER CHARACTER IS ANY CHARACTER controlled by the Dungeon Master. NPCs can be enemies or allies, regular folk or named monsters. They include the local innkeeper, the old wizard who lives in the tower on the outskirts of town, the death knight out to destroy the kingdom, and the dragon counting gold in its cavernous lair. <br><cite align="right">Dungeon Master's Guide 5ed. pp.89</cite> </p>
+				<br>
+				<p class="welcome"><b>Instructions</b></p>
+				<p class="welcome"> Use the drop down lists to find your ideal NPC characteristics.</p>
+				<p class="welcome"> Then hit generate. </p>
+			</div>
+            
+		</div>
+		<div class="container hiddenCanvas" id ="treasureCanvas">
+			<div class = "imageContainer">
+				<img src="resources/treasure_test.jpg" id="treasure_pic"></img>
+			</div>
+			<div class = "subContainer">
+				<p class = "welcome">ADVENTURERS STRIVE FOR MANY THINGS, including glory, knowledge, and justice. Many adventurers also seek something more tangible: fortune. Strands of golden chains, stacks of platinum coins, bejeweled crowns, enameled scepters, bolts of silk cloth, and powerful magic items all wait to be seized or unearthed by intrepid, treasure-seeking adventurers.Treasure comes in many forms, for example:</p>
+				<p class = "welcome"><b>Coins:</b> The most basic type of treasure is money, including copper pieces (cp), silver pieces (sp), electrum pieces (ep), gold pieces (gp), and platinum pieces (pp). Fifty coins of any type weigh 1 pound.</p>
+				<p class = "welcome"><b>Gemstones:</b> Gemstones are small, lightweight, and easily secured compared to their same value in coins.</p>
+				<p class = "welcome"><b>Art Objects:</b> Idols cast of solid gold, necklaces studded with precious stones, paintings of ancient kings, bejeweled dishes- art objects include all these and more.</p> 
+				<p class = "welcome"><b>Magic Items:</b> Types of magic items include armor, potions , scrolls, rings, rods, staffs, wands, weapons, and wondrous items. Magic items also have rarities: common, uncommon, rare, very rare, and legendary.<br><cite align="right">Dungeon Master's Guide 5ed. pp.133</cite></p>
+				<br>
+				<p class="welcome"><b>Instructions</b></p>
+				<p class="welcome"> The treasure your players get is based on a Challenge Rating (CR). </p>
+				
+			</div>
+		</div>
+		<div class="container hiddenCanvas" id ="mainOriginal">
+			<h2 class = "subtitle"> Welcome to the World of Dungeons and Dragons</h2>
+			<img src="resources/homepage.jpg" id="HomepagePic" alt = "Dungeons and Dragons">
+			<p class = "welcome"> Dungeons and Dragons is a tabletop pen and paper role playing game, where players take on the role of mighty adventurers who go on fantastical quests, fighting monsters, finding treasure, and saving the realm.  One player, called the Dungeon Master (DM), instead controls the world and its inhabitants to provide interesting stories and frightening challenges for the players who adventure there.  In particular, the DM has the responsibility of controlling the monsters that will do battle with the players.<br><br>
+			Generating monsters that the players will fight has a number of steps and can take time to do manually, the purpose of our program is to expedite the process, and allow a DM to instantly generate a random monster for their players to fight based on a variety of parameters.  In the following scenarios, you will take on the role of a dungeon master as he prepares encounters for the players in his game.</p>
+		</div>
+	</article>
+</body>
