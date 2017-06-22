@@ -6,7 +6,7 @@ It provides three generators to speed up in-game generations
 
 The three generators include:
 - Encounter Generator: 
-  Randomly generates a monster from a database of 400 monsters after filtering through given various criteria (filters) chosen 
+  Randomly generates a monster from a database of 400 monsters after filtering through various criteria (filters) chosen 
   by the user.
 - NPC (Non-player character) Generator:
   Randomly generator a character based on given criteria (filters) chosen by the users, then displays the character with a   
