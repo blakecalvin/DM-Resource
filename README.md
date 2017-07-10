@@ -9,7 +9,7 @@ The three generators include:
   Randomly generates a monster from a database of 400 monsters after filtering through various criteria (filters) chosen 
   by the user.
 - NPC (Non-player character) Generator:
-  Randomly generator a character based on given criteria (filters) chosen by the users, then displays the character with a   
+  Randomly generates a character based on given criteria (filters) chosen by the users, then displays the character with a   
   list of various attributes.
 - Loot Generator:
   Randomly generates loot (treasure) based on the entered Challenge Rating.
